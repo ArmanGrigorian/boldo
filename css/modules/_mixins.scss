@@ -1,0 +1,67 @@
+// buttons
+
+@mixin button() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-buttons);
+    font-weight: var(--openSans-weight-bold);
+    padding: 14px 36px;
+    border-radius: 26px;
+    cursor: pointer;
+}
+
+@mixin buttonMobile() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-buttons);
+    font-weight: var(--openSans-weight-bold);
+    padding: 8px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+// threeCircles
+
+@mixin threeCircles() {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 10%;
+    gap: 10px;
+
+    div {
+        width: 10px;
+        height: 10px;
+        box-shadow: 0px 0px 3px 1px var(--color-black);
+        border-radius: 50%;
+    }
+
+    div:nth-of-type(1) {
+        background-color: var(--color-circle-orange);
+    }
+
+    div:nth-of-type(2) {
+        background-color: var(--color-circle-yellow);
+    }
+
+    div:nth-of-type(3) {
+        background-color: var(--color-circle-green);
+    }
+}
+
+// flex-row
+
+@mixin rowFlex($justify-content: start, $align-items: stretch, $gap: 0px) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
+
+// flex-column
+
+@mixin colFlex($justify-content: start, $align-items: stretch, $gap: 0px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}

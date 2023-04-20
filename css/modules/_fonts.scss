@@ -1,0 +1,82 @@
+// h1
+@mixin h1() {
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-bold);
+    font-size: var(--font-size-h1);
+}
+
+@mixin h1Mobile() {
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-bold);
+    font-size: var(--font-size-h1-mobile);
+}
+
+// h2
+@mixin h2() {
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-regular);
+    font-size: var(--font-size-h2);
+}
+
+@mixin h2Mobile() {
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-regular);
+    font-size: var(--font-size-h2-mobile);
+}
+
+// h3
+@mixin h3() {
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-regular);
+    font-size: var(--font-size-h3);
+}
+
+@mixin h3Mobile() {
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-regular);
+    font-size: var(--font-size-h3-mobile);
+}
+
+// strong
+@mixin strong() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-strong);
+}
+
+@mixin strongMobile() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-strong-mobile);
+}
+
+// p
+@mixin p() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-p);
+}
+
+@mixin pMobile() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-p-mobile);
+}
+
+// thin
+@mixin thin() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-thin);
+}
+
+@mixin thinMobile() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-thin-mobile);
+}
+
+// button
+@mixin button() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-buttons);
+}
+
+@mixin buttonMobile() {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-buttons-mobile);
+}

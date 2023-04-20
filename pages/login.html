@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="../css/login/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <header id="header">
+            <hgroup>
+                <div class="divBox">
+                    <div></div>
+                    <div></div>
+                </div>
+                <h1><a rel="noopener" href="../index.html">Boldo</a></h1>
+            </hgroup>
+
+            <nav>
+                <ul>
+                    <li><a rel="noopener" href="./about.html">About</a></li>
+                    <li><a rel="noopener" href="./blog.html">Blog</a></li>
+                    <li><a rel="noopener" href="../index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <form action="#" method="" enctype="multipart/form-data">
+                <fieldset class="infoField">
+                    <legend title="About you">About you</legend>
+                    <input type="text" minlength="2" max="24" name="userFirstName" class="userFirstName"
+                        id="userFirstName" placeholder="enter your name...">
+
+                    <input type="text" minlength="2" max="24" name="userLastName" class="useLastName" id="userLastName"
+                        placeholder="enter your surname...">
+
+                    <input type="number" min="18" name="userAge" class="useAge" id="userAge"
+                        placeholder="enter your age...">
+                </fieldset>
+
+                <fieldset class="genderField">
+                    <legend title="Your gender">Your gender</legend>
+
+                    <div>
+                        <i class="fa-solid fa-mars-stroke"></i>
+                        <label for="male">male</label>
+                        <input type="radio" name="userGender" value="male" id="male">
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-venus"></i>
+                        <label for="female">female</label>
+                        <input type="radio" name="userGender" value="female" id="female">
+                    </div>
+                </fieldset>
+
+                <fieldset class="langField">
+                    <legend title="Your language(s)">Your language(s)</legend>
+
+                    <div>
+                        <label for="English">English</label>
+                        <input type="checkbox" name="English" value="inglish" id="English">
+                    </div>
+
+                    <div>
+                        <label for="Russian">Russian</label>
+                        <input type="checkbox" name="Russian" value="russian" id="Russian">
+                    </div>
+
+                    <div>
+                        <label for="Armenian">Armenian</label>
+                        <input type="checkbox" name="Armenian" value="armenian" id="Armenian">
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset class="emailField">
+                    <legend title="Almost there">Almost there</legend>
+                    <input type="email" minlength="5" max="25" name="userEmail" class="userEmail" id="userEmail"
+                        placeholder="enter your email...">
+                    <input title="no file chosen" type="file" name="userAvatar" class="userAvatar" id="userAvatar">
+                </fieldset>
+
+                <div>
+                    <input type="reset" name="resetButton" id="resetButton" value="reset">
+                    <input type="submit" name="signInButton" id="signInButton" value="sign in">
+                </div>
+
+            </form>
+
+        </section>
+
+        <footer>
+            <div class="footerLeft">
+                <hgroup>
+                    <div class="divBox">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <h3><a href="#header">Boldo</a></h3>
+                </hgroup>
+                <p>Social media validation business model canvas graphical user interface launch party creative facebook
+                    iPad twitter.</p>
+                <p>All rights reserved.</p>
+            </div>
+
+            <div class="footerRight">
+                <dl>
+                    <dt>Landing</dt>
+                    <dd><a rel="noopener" href="../index.html">Home</a></dd>
+                    <dd><a rel="noopener" href="./about.html">About</a></dd>
+                    <dd><a rel="noopener" href="./blog.html">Blog</a></dd>
+                </dl>
+                <dl>
+                    <dt>Company</dt>
+                    <dd><a rel="noopener" href="../index.html">Home</a></dd>
+                    <dd><a rel="noopener" href="./about.html">About</a></dd>
+                    <dd><a rel="noopener" href="./blog.html">Blog</a></dd>
+                </dl>
+                <dl>
+                    <dt>Resources</dt>
+                    <dd><a rel="noopener" href="../index.html">Home</a></dd>
+                    <dd><a rel="noopener" href="./about.html">About</a></dd>
+                    <dd><a rel="noopener" href="./blog.html">Blog</a></dd>
+                </dl>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>
