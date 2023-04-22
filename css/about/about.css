@@ -191,14 +191,14 @@ html {
   text-decoration: none;
   transition: var(--transition-color);
 }
+.aboutMain header .headerTop nav ul li a:hover {
+  color: var(--color-green);
+}
 @media only screen and (max-width: 768px) {
   .aboutMain header .headerTop nav ul li a {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
   }
-}
-.aboutMain header .headerTop nav ul li a:hover {
-  color: var(--color-green);
 }
 .aboutMain header .headerMid {
   color: var(--color-white);

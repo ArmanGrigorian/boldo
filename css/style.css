@@ -186,14 +186,14 @@ main header .headerTop nav ul li a {
   text-decoration: none;
   transition: var(--transition-color);
 }
+main header .headerTop nav ul li a:hover {
+  color: var(--color-green);
+}
 @media only screen and (max-width: 768px) {
   main header .headerTop nav ul li a {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
   }
-}
-main header .headerTop nav ul li a:hover {
-  color: var(--color-green);
 }
 main header .headerMid {
   display: flex;
@@ -938,15 +938,15 @@ main .secOne .artTwo .artTwoRight button {
   border: 3px solid var(--color-darkBlue);
   transition: var(--transition-both);
 }
+main .secOne .artTwo .artTwoRight button:hover {
+  color: var(--color-darkBlue);
+  background-color: var(--color-white);
+}
 @media only screen and (max-width: 768px) {
   main .secOne .artTwo .artTwoRight button {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-buttons-mobile);
   }
-}
-main .secOne .artTwo .artTwoRight button:hover {
-  color: var(--color-darkBlue);
-  background-color: var(--color-white);
 }
 main .secOne .artThree {
   width: 100%;
@@ -1017,12 +1017,6 @@ main .secOne .artThree .artThreeLeft ul li {
   cursor: pointer;
   transition: var(--transition-both), transform 200ms ease-in-out;
 }
-@media only screen and (max-width: 1152px) {
-  main .secOne .artThree .artThreeLeft ul li {
-    font-family: var(--font-family-openSans);
-    font-size: var(--font-size-buttons-mobile);
-  }
-}
 main .secOne .artThree .artThreeLeft ul li:hover {
   color: var(--color-white);
   background-color: var(--color-darkBlue);
@@ -1030,6 +1024,12 @@ main .secOne .artThree .artThreeLeft ul li:hover {
 }
 main .secOne .artThree .artThreeLeft ul li:hover i {
   color: var(--color-white);
+}
+@media only screen and (max-width: 1152px) {
+  main .secOne .artThree .artThreeLeft ul li {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-buttons-mobile);
+  }
 }
 main .secOne .artThree .artThreeLeft ul li i {
   margin-right: calc(var(--margin-mid) * 2);
@@ -1163,6 +1163,9 @@ main .secOne .artFour .artFourBottom > div {
   box-shadow: 0px 0px 5px 1px var(--color-black);
   transition: transform 200ms ease-in-out;
 }
+main .secOne .artFour .artFourBottom > div:hover {
+  transform: scale(1.02);
+}
 @media only screen and (max-width: 1152px) {
   main .secOne .artFour .artFourBottom > div {
     padding: calc(var(--padding-mid) * 2);
@@ -1173,9 +1176,6 @@ main .secOne .artFour .artFourBottom > div {
     width: 90%;
     box-shadow: inset 0px 0px 5px 1px var(--color-black);
   }
-}
-main .secOne .artFour .artFourBottom > div:hover {
-  transform: scale(1.02);
 }
 main .secOne .artFour .artFourBottom > div > p {
   padding-bottom: calc(var(--padding-mid) * 4);

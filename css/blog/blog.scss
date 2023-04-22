@@ -1,6 +1,6 @@
-@use "./modules/mixins" as mxs;
-@use "./modules/fonts" as fnt;
-@use "./modules/variables";
+@use "../modules/mixins" as mxs;
+@use "../modules/fonts" as fnt;
+@use "../modules/variables";
 
 * {
     box-sizing: border-box;
@@ -142,12 +142,12 @@ main {
                         text-decoration: none;
                         transition: var(--transition-color);
 
-                        @media only screen and (max-width: 768px) {
-                            @include fnt.pMobile;
-                        }
-
                         &:hover {
                             color: var(--color-green);
+                        }
+
+                        @media only screen and (max-width: 768px) {
+                            @include fnt.pMobile;
                         }
                     }
                 }
@@ -444,10 +444,7 @@ main {
                 color: var(--color-white);
                 text-align: center;
                 z-index: 2;
-
                 padding-bottom: calc(var(--padding-mid) * 4);
-
-                @media only screen and (max-width: 1152px) {}
 
                 @media only screen and (max-width: 768px) {
                     @include fnt.h2Mobile;
@@ -476,7 +473,6 @@ main {
                     @include mxs.button;
                     transition: var(--transition-both);
                     cursor: auto;
-
 
                     @media only screen and (max-width: 768px) {
                         @include mxs.buttonMobile;
@@ -590,9 +586,7 @@ main {
                 @media only screen and (max-width: 768px) {
                     @include fnt.pMobile;
                 }
-
             }
-
         }
 
         .footerRight {

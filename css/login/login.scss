@@ -1,6 +1,6 @@
-@use "./modules/mixins" as mxs;
-@use "./modules/fonts" as fnt;
-@use "./modules/variables";
+@use "../modules/mixins" as mxs;
+@use "../modules/fonts" as fnt;
+@use "../modules/variables";
 
 * {
     box-sizing: border-box;
@@ -139,12 +139,12 @@ main {
                         text-decoration: none;
                         transition: var(--transition-color);
 
-                        @media only screen and (max-width: 768px) {
-                            @include fnt.pMobile;
-                        }
-
                         &:hover {
                             color: var(--color-green);
+                        }
+
+                        @media only screen and (max-width: 768px) {
+                            @include fnt.pMobile;
                         }
                     }
                 }
@@ -154,7 +154,8 @@ main {
 
     section {
         padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
-        background-color: var(--color-darkBlue);
+        background-color: var(--color-green);
+        color: var(--color-black);
         @include mxs.rowFlex(space-between, center);
 
         @media only screen and (max-width: 1152px) {
@@ -165,8 +166,6 @@ main {
             padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 1);
         }
 
-        background-color: var(--color-green);
-        color: var(--color-black);
 
         form {
             margin: 0 auto;

@@ -129,12 +129,12 @@ main {
                             text-decoration: none;
                             transition: var(--transition-color);
 
-                            @media only screen and (max-width: 768px) {
-                                @include fnt.pMobile;
-                            }
-
                             &:hover {
                                 color: var(--color-green);
+                            }
+
+                            @media only screen and (max-width: 768px) {
+                                @include fnt.pMobile;
                             }
                         }
                     }
@@ -802,13 +802,13 @@ main {
                     border: 3px solid var(--color-darkBlue);
                     transition: var(--transition-both);
 
-                    @media only screen and (max-width: 768px) {
-                        @include fnt.buttonMobile;
-                    }
-
                     &:hover {
                         color: var(--color-darkBlue);
                         background-color: var(--color-white);
+                    }
+
+                    @media only screen and (max-width: 768px) {
+                        @include fnt.buttonMobile;
                     }
                 }
             }
@@ -867,10 +867,6 @@ main {
                         cursor: pointer;
                         transition: var(--transition-both), transform 200ms ease-in-out;
 
-                        @media only screen and (max-width: 1152px) {
-                            @include fnt.buttonMobile;
-                        }
-
                         &:hover {
                             color: var(--color-white);
                             background-color: var(--color-darkBlue);
@@ -879,6 +875,10 @@ main {
                             i {
                                 color: var(--color-white);
                             }
+                        }
+                        
+                        @media only screen and (max-width: 1152px) {
+                            @include fnt.buttonMobile;
                         }
 
                         i {
@@ -1009,6 +1009,10 @@ main {
                     box-shadow: 0px 0px 5px 1px var(--color-black);
                     transition: transform 200ms ease-in-out;
 
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+
                     @media only screen and (max-width: 1152px) {
                         padding: calc(var(--padding-mid) * 2);
                     }
@@ -1016,10 +1020,6 @@ main {
                     @media only screen and (max-width: 768px) {
                         width: 90%;
                         box-shadow: inset 0px 0px 5px 1px var(--color-black);
-                    }
-
-                    &:hover {
-                        transform: scale(1.02);
                     }
 
                     & > p {
@@ -1104,7 +1104,6 @@ main {
                 h3 {
                     width: 42%;
                     @include fnt.h3;
-
 
                     @media only screen and (max-width: 768px) {
                         width: 90%;
@@ -1314,10 +1313,7 @@ main {
                 color: var(--color-white);
                 text-align: center;
                 z-index: 2;
-
                 padding-bottom: calc(var(--padding-mid) * 4);
-
-                @media only screen and (max-width: 1152px) {}
 
                 @media only screen and (max-width: 768px) {
                     @include fnt.h2Mobile;
@@ -1345,7 +1341,6 @@ main {
                     outline: none;
                     @include mxs.button;
                     transition: var(--transition-both);
-
 
                     @media only screen and (max-width: 768px) {
                         @include mxs.buttonMobile;

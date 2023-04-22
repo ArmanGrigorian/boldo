@@ -190,14 +190,14 @@ main header nav ul li a {
   text-decoration: none;
   transition: var(--transition-color);
 }
+main header nav ul li a:hover {
+  color: var(--color-green);
+}
 @media only screen and (max-width: 768px) {
   main header nav ul li a {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
   }
-}
-main header nav ul li a:hover {
-  color: var(--color-green);
 }
 main section {
   padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);

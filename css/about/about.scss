@@ -1,6 +1,6 @@
-@use "./modules/mixins" as mxs;
-@use "./modules/fonts" as fnt;
-@use "./modules/variables";
+@use "../modules/mixins" as mxs;
+@use "../modules/fonts" as fnt;
+@use "../modules/variables";
 
 * {
     box-sizing: border-box;
@@ -25,7 +25,6 @@ html {
         to {
             transform: translateX(0%);
         }
-
     }
 
     header {
@@ -84,8 +83,6 @@ html {
                                 height: 10px;
                             }
                         }
-
-
                     }
                 }
 
@@ -143,12 +140,12 @@ html {
                             text-decoration: none;
                             transition: var(--transition-color);
 
-                            @media only screen and (max-width: 768px) {
-                                @include fnt.pMobile;
-                            }
-
                             &:hover {
                                 color: var(--color-green);
+                            }
+
+                            @media only screen and (max-width: 768px) {
+                                @include fnt.pMobile;
                             }
                         }
                     }
@@ -162,7 +159,6 @@ html {
 
             @media only screen and (max-width: 1152px) {
                 padding-bottom: calc(var(--padding-mid) * 4);
-                ;
             }
 
             @media only screen and (max-width: 512px) {
@@ -280,7 +276,6 @@ html {
 
             hgroup {
                 padding: calc(var(--padding-mid) * 0) calc(var(--padding-mid) * 4) calc(var(--padding-mid) * 4);
-
 
                 @media only screen and (max-width: 1152px) {
                     padding: calc(var(--padding-mid) * 0) calc(var(--padding-mid) * 3) calc(var(--padding-mid) * 3);
@@ -444,8 +439,6 @@ html {
                     padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 2);
                 }
 
-
-
                 & > p:first-of-type {
                     padding-bottom: var(--padding-mid);
                 }
@@ -547,7 +540,6 @@ html {
                     padding: calc(var(--padding-mid) * 2) 0px;
                 }
 
-
                 & > p:first-of-type {
                     padding-bottom: var(--padding-mid);
                 }
@@ -577,9 +569,7 @@ html {
                         width: 100%;
                         @include fnt.h2Mobile;
                     }
-
                 }
-
             }
 
             .artFourContainer {
@@ -675,10 +665,7 @@ html {
                     color: var(--color-white);
                     text-align: center;
                     z-index: 2;
-
                     padding-bottom: calc(var(--padding-mid) * 4);
-
-                    @media only screen and (max-width: 1152px) {}
 
                     @media only screen and (max-width: 768px) {
                         @include fnt.h2Mobile;
@@ -706,7 +693,6 @@ html {
                         outline: none;
                         @include mxs.button;
                         transition: var(--transition-both);
-
 
                         @media only screen and (max-width: 768px) {
                             @include mxs.buttonMobile;
@@ -755,12 +741,10 @@ html {
                 width: 100%;
             }
 
-
             hgroup {
                 @include mxs.rowFlex(start, center);
 
                 .divBox {
-
                     div {
                         background-color: var(--color-green);
                         border-radius: 0px 12px 12px 0px;
