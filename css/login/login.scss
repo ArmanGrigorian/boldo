@@ -155,7 +155,7 @@ main {
     section {
         padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
         background-color: var(--color-green);
-        color: var(--color-black);
+        color: var(--color-darkBlue);
         @include mxs.rowFlex(space-between, center);
 
         @media only screen and (max-width: 1152px) {
@@ -197,22 +197,25 @@ main {
             .infoField {
                 input {
                     width: 80%;
+                    color: var(--color-darkBlue);
                     padding: calc(var(--padding-thin) * 3) calc(var(--padding-thin) * 4);
                 }
             }
 
             .genderField,
             .langField {
-
                 input,
                 label {
+                    color: var(--color-darkBlue);
                     cursor: pointer;
                 }
             }
 
             .emailField {
                 input {
+                    color: var(--color-darkBlue);
                     width: 80%;
+                    color: var(--color-darkBlue);
                     padding: calc(var(--padding-thin) * 3) calc(var(--padding-thin) * 4);
                 }
             }
@@ -344,6 +347,7 @@ main {
 
                 dt {
                     @include fnt.button;
+                    color: var(--color-darkBlue);
                     font-weight: var(--openSans-weight-bold);
                     padding: 10px 0px;
 

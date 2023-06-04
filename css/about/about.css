@@ -1,19 +1,8 @@
 :root {
-  --color-white: rgb(255, 255, 255);
-  --color-black: black;
-  --color-green: rgb(101, 228, 163);
-  --color-skyBlue: rgb(13, 187, 252);
-  --color-circle: rgb(69, 96, 121);
-  --color-darkBlue: rgb(10, 38, 64);
-  --color-grey: rgb(128, 128, 128);
-  --color-skyGreyBack: rgb(69, 96, 121);
-  --color-skyGreyDark: rgb(149, 171, 188);
-  --color-skyGreyLight: rgb(143, 182, 213);
-  --color-circle-orange: rgb(252, 91, 0);
-  --color-circle-yellow: rgb(236, 170, 0);
-  --color-circle-green: rgb(0, 157, 16);
-  --font-family-manrope: "Manrope", sans-serif;
-  --font-family-openSans: "Open Sans", sans-serif;
+  --font-family-manrope: "Manrope",
+  sans-serif;
+  --font-family-openSans: "Open Sans",
+  sans-serif;
   --manrope-weight-regular: 400;
   --manrope-weight-bold: 700;
   --openSans-weight-regular: 400;
@@ -39,7 +28,40 @@
   --margin-mid: 10px;
   --border-radius: 15px;
   --transition-color: color 200ms ease-in-out;
-  --transition-both: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  --transition-both: color 200ms ease-in-out,
+  background-color 200ms ease-in-out;
+}
+:root body[data-theme=dark] {
+  --color-main-white: rgb(255, 255, 255);
+  --color-white: rgb(255, 255, 255);
+  --color-black: black;
+  --color-green: rgb(101, 228, 163);
+  --color-skyBlue: rgb(13, 187, 252);
+  --color-circle: rgb(69, 96, 121);
+  --color-darkBlue: rgb(10, 38, 64);
+  --color-grey: rgb(128, 128, 128);
+  --color-skyGreyBack: rgb(69, 96, 121);
+  --color-skyGreyDark: rgb(149, 171, 188);
+  --color-skyGreyLight: rgb(143, 182, 213);
+  --color-circle-orange: rgb(252, 91, 0);
+  --color-circle-yellow: rgb(236, 170, 0);
+  --color-circle-green: rgb(0, 157, 16);
+}
+:root body[data-theme=light] {
+  --color-main-white: rgb(255, 255, 255);
+  --color-white: rgb(255, 255, 255);
+  --color-black: black;
+  --color-green: rgb(10, 38, 64);
+  --color-skyBlue: rgb(13, 187, 252);
+  --color-circle: rgb(69, 96, 121);
+  --color-darkBlue: rgb(101, 228, 163);
+  --color-grey: rgb(128, 128, 128);
+  --color-skyGreyBack: rgb(10, 38, 64);
+  --color-skyGreyDark: rgb(149, 171, 188);
+  --color-skyGreyLight: rgb(143, 182, 213);
+  --color-circle-orange: rgb(252, 91, 0);
+  --color-circle-yellow: rgb(236, 170, 0);
+  --color-circle-green: rgb(0, 157, 16);
 }
 
 * {
@@ -166,6 +188,27 @@ html {
 .aboutMain header .headerTop nav ul li {
   list-style-type: none;
 }
+.aboutMain header .headerTop nav ul li button {
+  background-color: transparent;
+  border: none;
+}
+.aboutMain header .headerTop nav ul li a, .aboutMain header .headerTop nav ul li button {
+  font-family: var(--font-family-openSans);
+  font-size: var(--font-size-p);
+  font-weight: var(--openSans-weight-semiBold);
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+.aboutMain header .headerTop nav ul li a:hover, .aboutMain header .headerTop nav ul li button:hover {
+  color: var(--color-green);
+}
+@media only screen and (max-width: 768px) {
+  .aboutMain header .headerTop nav ul li a, .aboutMain header .headerTop nav ul li button {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-p-mobile);
+  }
+}
 .aboutMain header .headerTop nav ul li:last-of-type > a {
   padding: calc(var(--padding-thin) * 4) calc(var(--padding-mid) * 3);
   color: var(--color-darkBlue);
@@ -181,23 +224,6 @@ html {
 @media only screen and (max-width: 768px) {
   .aboutMain header .headerTop nav ul li:last-of-type > a {
     padding: var(--padding-thin) var(--padding-mid);
-  }
-}
-.aboutMain header .headerTop nav ul li a {
-  font-family: var(--font-family-openSans);
-  font-size: var(--font-size-p);
-  font-weight: var(--openSans-weight-semiBold);
-  color: var(--color-white);
-  text-decoration: none;
-  transition: var(--transition-color);
-}
-.aboutMain header .headerTop nav ul li a:hover {
-  color: var(--color-green);
-}
-@media only screen and (max-width: 768px) {
-  .aboutMain header .headerTop nav ul li a {
-    font-family: var(--font-family-openSans);
-    font-size: var(--font-size-p-mobile);
   }
 }
 .aboutMain header .headerMid {
@@ -217,6 +243,7 @@ html {
 .aboutMain header .headerMid h2,
 .aboutMain header .headerMid p {
   width: 100%;
+  color: var(--color-white);
   text-align: center;
   letter-spacing: 1px;
 }
@@ -341,7 +368,24 @@ html {
   }
 }
 .aboutMain section .artOne hgroup > p:first-of-type {
+  color: var(--color-grey);
   padding-bottom: var(--padding-mid);
+}
+.aboutMain section .artOne hgroup h2 {
+  margin: 0 auto;
+  color: var(--color-darkBlue);
+  width: 80%;
+  font-family: var(--font-family-manrope);
+  font-weight: var(--manrope-weight-regular);
+  font-size: var(--font-size-h2);
+}
+@media only screen and (max-width: 768px) {
+  .aboutMain section .artOne hgroup h2 {
+    width: 100%;
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-regular);
+    font-size: var(--font-size-h2-mobile);
+  }
 }
 .aboutMain section .artOne hgroup p {
   color: var(--color-grey);
@@ -360,21 +404,6 @@ html {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
     line-height: normal;
-  }
-}
-.aboutMain section .artOne hgroup h2 {
-  margin: 0 auto;
-  width: 80%;
-  font-family: var(--font-family-manrope);
-  font-weight: var(--manrope-weight-regular);
-  font-size: var(--font-size-h2);
-}
-@media only screen and (max-width: 768px) {
-  .aboutMain section .artOne hgroup h2 {
-    width: 100%;
-    font-family: var(--font-family-manrope);
-    font-weight: var(--manrope-weight-regular);
-    font-size: var(--font-size-h2-mobile);
   }
 }
 .aboutMain section .artTwo {
@@ -398,6 +427,7 @@ html {
 .aboutMain section .artTwo hgroup p {
   text-align: center;
   letter-spacing: 1px;
+  color: var(--color-white);
   text-shadow: 0px 0px 1px var(--color-black);
 }
 .aboutMain section .artTwo hgroup p {
@@ -513,6 +543,22 @@ html {
 .aboutMain section .artThree hgroup > p:first-of-type {
   padding-bottom: var(--padding-mid);
 }
+.aboutMain section .artThree hgroup h2 {
+  margin: 0 auto;
+  width: 80%;
+  color: var(--color-darkBlue);
+  font-family: var(--font-family-manrope);
+  font-weight: var(--manrope-weight-regular);
+  font-size: var(--font-size-h2);
+}
+@media only screen and (max-width: 768px) {
+  .aboutMain section .artThree hgroup h2 {
+    width: 100%;
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-regular);
+    font-size: var(--font-size-h2-mobile);
+  }
+}
 .aboutMain section .artThree hgroup p {
   color: var(--color-grey);
   margin: 0 auto;
@@ -530,21 +576,6 @@ html {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
     line-height: normal;
-  }
-}
-.aboutMain section .artThree hgroup h2 {
-  margin: 0 auto;
-  width: 80%;
-  font-family: var(--font-family-manrope);
-  font-weight: var(--manrope-weight-regular);
-  font-size: var(--font-size-h2);
-}
-@media only screen and (max-width: 768px) {
-  .aboutMain section .artThree hgroup h2 {
-    width: 100%;
-    font-family: var(--font-family-manrope);
-    font-weight: var(--manrope-weight-regular);
-    font-size: var(--font-size-h2-mobile);
   }
 }
 .aboutMain section .artThree .artThreeContainer {
@@ -574,6 +605,7 @@ html {
 .aboutMain section .artThree .artThreeContainer div strong {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-strong);
+  color: var(--color-darkBlue);
   font-weight: var(--openSans-weight-semiBold);
 }
 @media only screen and (max-width: 768px) {
@@ -608,7 +640,6 @@ html {
   }
 }
 .aboutMain section .artFour hgroup {
-  color: var(--color-white);
   padding: calc(var(--padding-mid) * 4) 0px;
 }
 @media only screen and (max-width: 1152px) {
@@ -622,9 +653,27 @@ html {
   }
 }
 .aboutMain section .artFour hgroup > p:first-of-type {
+  color: var(--color-white);
   padding-bottom: var(--padding-mid);
 }
+.aboutMain section .artFour hgroup h2 {
+  color: var(--color-white);
+  margin: 0 auto;
+  width: 80%;
+  font-family: var(--font-family-manrope);
+  font-weight: var(--manrope-weight-regular);
+  font-size: var(--font-size-h2);
+}
+@media only screen and (max-width: 768px) {
+  .aboutMain section .artFour hgroup h2 {
+    width: 100%;
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-regular);
+    font-size: var(--font-size-h2-mobile);
+  }
+}
 .aboutMain section .artFour hgroup p {
+  color: var(--color-white);
   margin: 0 auto;
   width: 80%;
   font-family: var(--font-family-openSans);
@@ -640,21 +689,6 @@ html {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
     line-height: normal;
-  }
-}
-.aboutMain section .artFour hgroup h2 {
-  margin: 0 auto;
-  width: 80%;
-  font-family: var(--font-family-manrope);
-  font-weight: var(--manrope-weight-regular);
-  font-size: var(--font-size-h2);
-}
-@media only screen and (max-width: 768px) {
-  .aboutMain section .artFour hgroup h2 {
-    width: 100%;
-    font-family: var(--font-family-manrope);
-    font-weight: var(--manrope-weight-regular);
-    font-size: var(--font-size-h2-mobile);
   }
 }
 .aboutMain section .artFour .artFourContainer {
@@ -677,7 +711,6 @@ html {
 }
 .aboutMain section .artFour .artFourContainer > div {
   width: 80%;
-  color: var(--color-white);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -689,6 +722,7 @@ html {
   border-radius: calc(var(--border-radius) * 2);
 }
 .aboutMain section .artFour .artFourContainer > div div strong {
+  color: var(--color-white);
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-strong);
   text-shadow: 0px 0px 1px var(--color-black);
@@ -700,6 +734,7 @@ html {
   }
 }
 .aboutMain section .artFour .artFourContainer > div div p {
+  color: var(--color-white);
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
   font-weight: var(--openSans-weight-regular);
@@ -958,6 +993,7 @@ html {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
   font-weight: var(--openSans-weight-bold);
+  color: var(--color-darkBlue);
   padding: 10px 0px;
 }
 @media only screen and (max-width: 768px) {

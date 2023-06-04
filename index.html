@@ -16,10 +16,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
     <title>Boldo</title>
 </head>
 
-<body>
+<body data-theme="dark">
     <main>
         <header id="header">
             <div class="headerTop">
@@ -33,6 +34,7 @@
 
                 <nav>
                     <ul>
+                        <li><button type="button" id="themeChangeButton">Change Theme</button></li>
                         <li><a rel="noopener" href="#services">Services</a></li>
                         <li><a rel="noopener" href="./pages/about.html">About</a></li>
                         <li><a rel="noopener" href="./pages/blog.html">Blog</a></li>
@@ -169,8 +171,8 @@
 
             <div class="headerBtm">
                 <div class="slider">
-                    <img src="./img/Logo Wall.png" alt="boldo logo">
-                    <img src="./img/Logo Wall.png" alt="presto logo">
+                    <img src="./img/LogoWall.png" alt="boldo logo">
+                    <img src="./img/LogoWall.png" alt="presto logo">
                 </div>
             </div>
 
@@ -186,21 +188,21 @@
             <article class="artOne">
                 <div>
                     <img src="./img/manWalking.jpg" alt="a walking man">
-                    <strong>Cool feature title</strong>
+                    <h4>Cool feature title</h4>
                     <p>Learning curve network effects return on investment.</p>
                     <button type="button">Explore page<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div>
                     <img src="./img/twoPeople.jpg" alt="two man are cooperating">
-                    <strong>Even cooler feature</strong>
+                    <h4>Even cooler feature</h4>
                     <p>Learning curve network effects return on investment.</p>
                     <button type="button">Explore page<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div>
                     <img src="./img/manInYard.jpg" alt="a man sits in a bench">
-                    <strong>Cool feature title</strong>
+                    <h4>Cool feature title</h4>
                     <p>Learning curve network effects return on investment.</p>
                     <button type="button">Explore page<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
@@ -212,7 +214,7 @@
                 </div>
 
                 <div class="artTwoRight">
-                    <strong>We connect our customers with the best, and help them keep up-and stay open.</strong>
+                    <h4>We connect our customers with the best, and help them keep up-and stay open.</h4>
 
                     <ul>
                         <li><i class="fa-solid fa-circle-check"></i>We connect our customers with the best.</li>
@@ -226,7 +228,7 @@
 
             <article class="artThree">
                 <div class="artThreeLeft">
-                    <strong>We connect our customers with the best, and help them keep up-and stay open.</strong>
+                    <h4>We connect our customers with the best, and help them keep up-and stay open.</h4>
 
                     <ul>
 
@@ -255,7 +257,7 @@
                         <div>
                             <img src="./img/albusDumbledore.png" alt="Albus Dumbledore">
                             <div>
-                                <strong>Albus Dumbledore</strong>
+                                <h4>Albus Dumbledore</h4>
                                 <p>Manager @ Howarts</p>
                             </div>
                         </div>
@@ -266,7 +268,7 @@
                         <div>
                             <img src="./img/severusSnape.png" alt="Severus Snape">
                             <div>
-                                <strong>Severus Snape</strong>
+                                <h4>Severus Snape</h4>
                                 <p>Manager @ Slytherin</p>
                             </div>
                         </div>
@@ -276,7 +278,7 @@
                         <div>
                             <img src="./img/harryPotter.png" alt="Harry Potter">
                             <div>
-                                <strong>Harry Potter</strong>
+                                <h4>Harry Potter</h4>
                                 <p>Team Leader @ Gryffindor</p>
                             </div>
                         </div>
@@ -307,7 +309,8 @@
                 <div class="artSixContainer">
                     <div>
                         <img src="./img/manWalking.jpg" alt="a walking man">
-                        <p><strong>Category</strong><time datatime="2021-11-22">November 22, 2021</time></p>
+                        <h4>Category</h4>
+                       <time datatime="2021-11-22">November 22, 2021</time>
                         <p>Pitch termsheet backing validation focus release.</p>
                         <div>
                             <img src="./img/chandlerBing.png" alt="Chandler Bing">
@@ -316,7 +319,8 @@
                     </div>
                     <div>
                         <img src="./img/womanWithPhone.jpg" alt="woman with phone">
-                        <p><strong>Category</strong><time datatime="2021-11-22">November 22, 2021</time></p>
+                        <h4>Category</h4>
+                        <time datatime="2021-11-22">November 22, 2021</time>
                         <p>Seed round direct mailing non-disclosure agreement graphical user interface rockstar.</p>
                         <div>
                             <img src="./img/rachelGreen.png" alt="Rachel Green">
@@ -325,7 +329,8 @@
                     </div>
                     <div>
                         <img src="./img/marketing.jpg" alt="marketing">
-                        <p><strong>Category</strong><time datatime="2021-11-22">November 22, 2021</time></p>
+                        <h4>Category</h4>
+                        <time datatime="2021-11-22">November 22, 2021</time>
                         <p>Beta prototype sales iPad gen-z marketing network effects value proposition</p>
                         <div>
                             <img src="./img/monicaGeller.png" alt="Monica Geller">
@@ -341,7 +346,7 @@
             <article class="artSeven">
                 <div class="bgCircle"></div>
                 <h2>An enterprise template to ramp up your company website</h2>
-                <form action="" method="">
+                <form action="#" method="POST">
                     <input type="email" name="userEmail" class="userEmail" id="userEmail"
                         placeholder="Your email address">
 
@@ -354,13 +359,13 @@
 
         <footer>
             <div class="footerLeft">
-                <hgroup>
+                <div class="fLF">
                     <div class="divBox">
                         <div></div>
                         <div></div>
                     </div>
                     <h3><a href="#header">Boldo</a></h3>
-                </hgroup>
+                </div>
                 <p>Social media validation business model canvas graphical user interface launch party creative facebook
                     iPad twitter.</p>
                 <p>All rights reserved.</p>

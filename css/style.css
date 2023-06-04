@@ -1,19 +1,8 @@
 :root {
-  --color-white: rgb(255, 255, 255);
-  --color-black: black;
-  --color-green: rgb(101, 228, 163);
-  --color-skyBlue: rgb(13, 187, 252);
-  --color-circle: rgb(69, 96, 121);
-  --color-darkBlue: rgb(10, 38, 64);
-  --color-grey: rgb(128, 128, 128);
-  --color-skyGreyBack: rgb(69, 96, 121);
-  --color-skyGreyDark: rgb(149, 171, 188);
-  --color-skyGreyLight: rgb(143, 182, 213);
-  --color-circle-orange: rgb(252, 91, 0);
-  --color-circle-yellow: rgb(236, 170, 0);
-  --color-circle-green: rgb(0, 157, 16);
-  --font-family-manrope: "Manrope", sans-serif;
-  --font-family-openSans: "Open Sans", sans-serif;
+  --font-family-manrope: "Manrope",
+  sans-serif;
+  --font-family-openSans: "Open Sans",
+  sans-serif;
   --manrope-weight-regular: 400;
   --manrope-weight-bold: 700;
   --openSans-weight-regular: 400;
@@ -39,7 +28,40 @@
   --margin-mid: 10px;
   --border-radius: 15px;
   --transition-color: color 200ms ease-in-out;
-  --transition-both: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  --transition-both: color 200ms ease-in-out,
+  background-color 200ms ease-in-out;
+}
+:root body[data-theme=dark] {
+  --color-main-white: rgb(255, 255, 255);
+  --color-white: rgb(255, 255, 255);
+  --color-black: black;
+  --color-green: rgb(101, 228, 163);
+  --color-skyBlue: rgb(13, 187, 252);
+  --color-circle: rgb(69, 96, 121);
+  --color-darkBlue: rgb(10, 38, 64);
+  --color-grey: rgb(128, 128, 128);
+  --color-skyGreyBack: rgb(69, 96, 121);
+  --color-skyGreyDark: rgb(149, 171, 188);
+  --color-skyGreyLight: rgb(143, 182, 213);
+  --color-circle-orange: rgb(252, 91, 0);
+  --color-circle-yellow: rgb(236, 170, 0);
+  --color-circle-green: rgb(0, 157, 16);
+}
+:root body[data-theme=light] {
+  --color-main-white: rgb(255, 255, 255);
+  --color-white: rgb(255, 255, 255);
+  --color-black: black;
+  --color-green: rgb(10, 38, 64);
+  --color-skyBlue: rgb(13, 187, 252);
+  --color-circle: rgb(69, 96, 121);
+  --color-darkBlue: rgb(101, 228, 163);
+  --color-grey: rgb(128, 128, 128);
+  --color-skyGreyBack: rgb(10, 38, 64);
+  --color-skyGreyDark: rgb(149, 171, 188);
+  --color-skyGreyLight: rgb(143, 182, 213);
+  --color-circle-orange: rgb(252, 91, 0);
+  --color-circle-yellow: rgb(236, 170, 0);
+  --color-circle-green: rgb(0, 157, 16);
 }
 
 * {
@@ -53,6 +75,7 @@ html {
 }
 
 main {
+  background-color: var(--color-main-white);
   margin: 0 auto;
   max-width: 1320px;
 }
@@ -131,7 +154,7 @@ main header .headerTop hgroup h1 a {
   font-family: var(--font-family-manrope);
   font-weight: var(--manrope-weight-bold);
   font-size: var(--font-size-h1);
-  text-shadow: 0px 0px 1px var(--color-black);
+  text-shadow: 0px 0px 1px var(--color-darkBlue);
   color: var(--color-white);
   cursor: pointer;
 }
@@ -161,6 +184,27 @@ main header .headerTop nav ul {
 main header .headerTop nav ul li {
   list-style-type: none;
 }
+main header .headerTop nav ul li button {
+  background-color: transparent;
+  border: none;
+}
+main header .headerTop nav ul li a, main header .headerTop nav ul li button {
+  font-family: var(--font-family-openSans);
+  font-size: var(--font-size-p);
+  font-weight: var(--openSans-weight-semiBold);
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+main header .headerTop nav ul li a:hover, main header .headerTop nav ul li button:hover {
+  color: var(--color-green);
+}
+@media only screen and (max-width: 768px) {
+  main header .headerTop nav ul li a, main header .headerTop nav ul li button {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-p-mobile);
+  }
+}
 main header .headerTop nav ul li:last-of-type > a {
   padding: calc(var(--padding-thin) * 4) calc(var(--padding-mid) * 3);
   color: var(--color-darkBlue);
@@ -178,23 +222,6 @@ main header .headerTop nav ul li:last-of-type > a {
     padding: var(--padding-thin) var(--padding-mid);
   }
 }
-main header .headerTop nav ul li a {
-  font-family: var(--font-family-openSans);
-  font-size: var(--font-size-p);
-  font-weight: var(--openSans-weight-semiBold);
-  color: var(--color-white);
-  text-decoration: none;
-  transition: var(--transition-color);
-}
-main header .headerTop nav ul li a:hover {
-  color: var(--color-green);
-}
-@media only screen and (max-width: 768px) {
-  main header .headerTop nav ul li a {
-    font-family: var(--font-family-openSans);
-    font-size: var(--font-size-p-mobile);
-  }
-}
 main header .headerMid {
   display: flex;
   justify-content: space-between;
@@ -210,7 +237,6 @@ main header .headerMid {
 }
 main header .headerMid .headerMidLft {
   width: 48%;
-  color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,7 +257,9 @@ main header .headerMid .headerMidLft h2 {
   font-family: var(--font-family-manrope);
   font-weight: var(--manrope-weight-regular);
   font-size: var(--font-size-h2);
-  text-shadow: 0px 0px 1px var(--color-black);
+  color: var(--color-white);
+  font-weight: 600;
+  text-shadow: 0px 0px 1px var(--color-darkBlue);
 }
 @media only screen and (max-width: 768px) {
   main header .headerMid .headerMidLft h2 {
@@ -243,8 +271,9 @@ main header .headerMid .headerMidLft h2 {
 main header .headerMid .headerMidLft p {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
+  color: var(--color-white);
   font-weight: var(--openSans-weight-regular);
-  text-shadow: 0px 0px 1px var(--color-black);
+  text-shadow: 0px 0px 1px var(--color-darkBlue);
 }
 @media only screen and (max-width: 768px) {
   main header .headerMid .headerMidLft p {
@@ -349,7 +378,7 @@ main header .headerMid .headerMidRgt .topBox {
   border-radius: var(--border-radius);
   margin-bottom: calc(var(--margin-mid) * 2);
   padding: calc(var(--padding-thin) * 7);
-  box-shadow: inset 0px 0px 3px 1px var(--color-black);
+  box-shadow: inset 0px 0px 3px 1px var(--color-darkBlue);
 }
 @media only screen and (max-width: 1152px) {
   main header .headerMid .headerMidRgt .topBox {
@@ -455,7 +484,7 @@ main header .headerMid .headerMidRgt .topBox .horizontalBox .horizontal p {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
   font-weight: var(--manrope-weight-bold);
-  text-shadow: 0px 0px 1px var(--color-black);
+  text-shadow: 0px 0px 1px var(--color-darkBlue);
 }
 @media only screen and (max-width: 1152px) {
   main header .headerMid .headerMidRgt .topBox .horizontalBox .horizontal p {
@@ -486,7 +515,7 @@ main header .headerMid .headerMidRgt .bottomBox .rightBox {
   background-color: var(--color-skyGreyBack);
   border-radius: var(--border-radius);
   padding: calc(var(--padding-thin) * 7);
-  box-shadow: inset 0px 0px 3px 1px var(--color-black);
+  box-shadow: inset 0px 0px 3px 1px var(--color-darkBlue);
 }
 main header .headerMid .headerMidRgt .bottomBox .leftBox {
   width: min(192px, 38%);
@@ -600,7 +629,7 @@ main header .headerMid .headerMidRgt .bottomBox .rightBox .circleBox .circleLeft
   height: 80px;
   border-top: 10px solid var(--color-green);
   border-right: 10px solid var(--color-green);
-  border-bottom: 10px solid var(--color-black);
+  border-bottom: 10px solid var(--color-darkBlue);
   border-left: 10px solid var(--color-skyBlue);
   border-radius: 50%;
   animation: circle 10000ms linear infinite;
@@ -611,7 +640,7 @@ main header .headerMid .headerMidRgt .bottomBox .rightBox .circleBox .circleLeft
     height: 60px;
     border-top: 8px solid var(--color-green);
     border-right: 8px solid var(--color-green);
-    border-bottom: 8px solid var(--color-black);
+    border-bottom: 8px solid var(--color-darkBlue);
     border-left: 8px solid var(--color-skyBlue);
   }
 }
@@ -621,7 +650,7 @@ main header .headerMid .headerMidRgt .bottomBox .rightBox .circleBox .circleLeft
     height: 50px;
     border-top: 7px solid var(--color-green);
     border-right: 7px solid var(--color-green);
-    border-bottom: 7px solid var(--color-black);
+    border-bottom: 7px solid var(--color-darkBlue);
     border-left: 7px solid var(--color-skyBlue);
   }
 }
@@ -660,6 +689,7 @@ main header .headerMid .headerMidRgt .bottomBox .rightBox .circleBox .circleRigh
 }
 main header .headerBtm {
   width: 100%;
+  background-color: rgb(10, 38, 64);
   overflow: hidden;
 }
 main header .headerBtm .slider {
@@ -708,6 +738,7 @@ main .secOne .secOneTop h2 {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  color: var(--color-darkBlue);
   font-family: var(--font-family-manrope);
   font-weight: var(--manrope-weight-regular);
   font-size: var(--font-size-h2);
@@ -771,13 +802,14 @@ main .secOne .artOne div img {
     aspect-ratio: 1;
   }
 }
-main .secOne .artOne div strong {
+main .secOne .artOne div h4 {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-strong);
+  color: var(--color-darkBlue);
   font-weight: var(--openSans-weight-regular);
 }
 @media only screen and (max-width: 768px) {
-  main .secOne .artOne div strong {
+  main .secOne .artOne div h4 {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-strong-mobile);
   }
@@ -893,14 +925,15 @@ main .secOne .artTwo .artTwoRight {
     margin-top: calc(var(--margin-mid) * 5);
   }
 }
-main .secOne .artTwo .artTwoRight strong {
+main .secOne .artTwo .artTwoRight h4 {
   font-family: var(--font-family-manrope);
   font-weight: var(--manrope-weight-regular);
   font-size: var(--font-size-h3);
+  color: var(--color-darkBlue);
   font-weight: var(--manrope-weight-regular);
 }
 @media only screen and (max-width: 768px) {
-  main .secOne .artTwo .artTwoRight strong {
+  main .secOne .artTwo .artTwoRight h4 {
     font-family: var(--font-family-manrope);
     font-weight: var(--manrope-weight-regular);
     font-size: var(--font-size-h3-mobile);
@@ -910,6 +943,7 @@ main .secOne .artTwo .artTwoRight ul li {
   list-style-type: none;
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
+  color: var(--color-white);
   font-weight: var(--openSans-weight-regular);
 }
 @media only screen and (max-width: 768px) {
@@ -987,14 +1021,15 @@ main .secOne .artThree .artThreeLeft {
     margin-bottom: calc(var(--margin-mid) * 2);
   }
 }
-main .secOne .artThree .artThreeLeft strong {
+main .secOne .artThree .artThreeLeft h4 {
   font-family: var(--font-family-manrope);
   font-weight: var(--manrope-weight-regular);
   font-size: var(--font-size-h3);
+  color: var(--color-darkBlue);
   font-weight: var(--manrope-weight-regular);
 }
 @media only screen and (max-width: 768px) {
-  main .secOne .artThree .artThreeLeft strong {
+  main .secOne .artThree .artThreeLeft h4 {
     font-family: var(--font-family-manrope);
     font-weight: var(--manrope-weight-regular);
     font-size: var(--font-size-h3-mobile);
@@ -1006,6 +1041,7 @@ main .secOne .artThree .artThreeLeft strong {
   }
 }
 main .secOne .artThree .artThreeLeft ul li {
+  color: var(--color-darkBlue);
   list-style-type: none;
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
@@ -1103,7 +1139,7 @@ main .secOne .artFour .artFourTop h2 {
   font-weight: var(--manrope-weight-regular);
   color: var(--color-white);
   padding-bottom: var(--padding-mid);
-  text-shadow: 0px 0px 2px var(--color-black);
+  text-shadow: 0px 0px 2px var(--color-darkBlue);
 }
 @media only screen and (max-width: 1152px) {
   main .secOne .artFour .artFourTop h2 {
@@ -1160,7 +1196,7 @@ main .secOne .artFour .artFourBottom > div {
   padding: calc(var(--padding-mid) * 4);
   border-radius: 12px;
   background-color: var(--color-white);
-  box-shadow: 0px 0px 5px 1px var(--color-black);
+  box-shadow: 0px 0px 5px 1px var(--color-darkBlue);
   transition: transform 200ms ease-in-out;
 }
 main .secOne .artFour .artFourBottom > div:hover {
@@ -1174,10 +1210,11 @@ main .secOne .artFour .artFourBottom > div:hover {
 @media only screen and (max-width: 768px) {
   main .secOne .artFour .artFourBottom > div {
     width: 90%;
-    box-shadow: inset 0px 0px 5px 1px var(--color-black);
+    box-shadow: inset 0px 0px 5px 1px var(--color-darkBlue);
   }
 }
 main .secOne .artFour .artFourBottom > div > p {
+  color: var(--color-darkBlue);
   padding-bottom: calc(var(--padding-mid) * 4);
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-strong);
@@ -1208,14 +1245,14 @@ main .secOne .artFour .artFourBottom > div div div {
   align-items: start;
   gap: 0px;
 }
-main .secOne .artFour .artFourBottom > div div div strong {
+main .secOne .artFour .artFourBottom > div div div h4 {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
   font-weight: var(--openSans-weight-bold);
   color: var(--color-darkBlue);
 }
 @media only screen and (max-width: 768px) {
-  main .secOne .artFour .artFourBottom > div div div strong {
+  main .secOne .artFour .artFourBottom > div div div h4 {
     font-size: var(--font-size-p-mobile);
   }
 }
@@ -1266,6 +1303,7 @@ main .secOne .artFive div {
 }
 main .secOne .artFive div h3 {
   width: 42%;
+  color: var(--color-darkBlue);
   font-family: var(--font-family-manrope);
   font-weight: var(--manrope-weight-regular);
   font-size: var(--font-size-h3);
@@ -1297,6 +1335,7 @@ main .secOne .artFive div ul li {
   padding: var(--padding-mid) 0px;
   margin: var(--margin-mid);
   list-style-type: none;
+  color: var(--color-darkBlue);
   border-bottom: 1px solid rgb(196, 196, 196);
 }
 @media only screen and (max-width: 768px) {
@@ -1350,6 +1389,7 @@ main .secTwo .secTwoTop h2 {
   margin: 0 auto;
   width: 80%;
   text-align: center;
+  color: var(--color-darkBlue);
   font-family: var(--font-family-manrope);
   font-weight: var(--manrope-weight-regular);
   font-size: var(--font-size-h2);
@@ -1389,41 +1429,40 @@ main .secTwo .artSix .artSixContainer > div > img {
   width: 100%;
   aspect-ratio: 1;
 }
-main .secTwo .artSix .artSixContainer > div > p:nth-of-type(1) {
-  padding-top: var(--padding-mid);
-}
-main .secTwo .artSix .artSixContainer > div > p:nth-of-type(1) strong {
+main .secTwo .artSix .artSixContainer > div > h4 {
   padding-right: var(--padding-mid);
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
+  color: var(--color-darkBlue);
   font-weight: var(--openSans-weight-bold);
 }
 @media only screen and (max-width: 768px) {
-  main .secTwo .artSix .artSixContainer > div > p:nth-of-type(1) strong {
+  main .secTwo .artSix .artSixContainer > div > h4 {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
   }
 }
-main .secTwo .artSix .artSixContainer > div > p:nth-of-type(1) time {
+main .secTwo .artSix .artSixContainer > div > time {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
   font-weight: var(--openSans-weight-regular);
   color: var(--color-grey);
 }
 @media only screen and (max-width: 768px) {
-  main .secTwo .artSix .artSixContainer > div > p:nth-of-type(1) time {
+  main .secTwo .artSix .artSixContainer > div > time {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
   }
 }
-main .secTwo .artSix .artSixContainer > div > p:nth-of-type(2) {
+main .secTwo .artSix .artSixContainer > div > p {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
+  color: var(--color-darkBlue);
   font-weight: var(--openSans-weight-regular);
   padding: var(--padding-mid) 0px;
 }
 @media only screen and (max-width: 768px) {
-  main .secTwo .artSix .artSixContainer > div > p:nth-of-type(2) {
+  main .secTwo .artSix .artSixContainer > div > p {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-buttons-mobile);
   }
@@ -1438,6 +1477,7 @@ main .secTwo .artSix .artSixContainer > div div {
 main .secTwo .artSix .artSixContainer > div div p {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
+  color: var(--color-darkBlue);
   font-weight: var(--openSans-weight-regular);
 }
 @media only screen and (max-width: 768px) {
@@ -1484,6 +1524,7 @@ main .secTwo .artSeven {
   position: relative;
   overflow: hidden;
   width: 100%;
+  border-radius: 20px;
   background-color: var(--color-darkBlue);
   padding: calc(var(--padding-mid) * 8) calc(var(--padding-mid) * 12);
 }
@@ -1618,61 +1659,62 @@ main footer .footerLeft {
     width: 100%;
   }
 }
-main footer .footerLeft hgroup {
+main footer .footerLeft .fLF {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 0px;
 }
-main footer .footerLeft hgroup .divBox div {
+main footer .footerLeft .fLF .divBox div {
   background-color: var(--color-green);
   border-radius: 0px 12px 12px 0px;
   margin-right: var(--margin-thin);
 }
-main footer .footerLeft hgroup .divBox div:first-of-type {
+main footer .footerLeft .fLF .divBox div:first-of-type {
   width: 18px;
   height: 14px;
   margin-bottom: calc(var(--margin-thin) + 1px);
 }
 @media only screen and (max-width: 1152px) {
-  main footer .footerLeft hgroup .divBox div:first-of-type {
+  main footer .footerLeft .fLF .divBox div:first-of-type {
     width: 15px;
     height: 11px;
   }
 }
 @media only screen and (max-width: 768px) {
-  main footer .footerLeft hgroup .divBox div:first-of-type {
+  main footer .footerLeft .fLF .divBox div:first-of-type {
     width: 13px;
     height: 9px;
   }
 }
-main footer .footerLeft hgroup .divBox div:last-of-type {
+main footer .footerLeft .fLF .divBox div:last-of-type {
   width: 25px;
   height: 17px;
 }
 @media only screen and (max-width: 1152px) {
-  main footer .footerLeft hgroup .divBox div:last-of-type {
+  main footer .footerLeft .fLF .divBox div:last-of-type {
     width: 22px;
     height: 14px;
   }
 }
 @media only screen and (max-width: 768px) {
-  main footer .footerLeft hgroup .divBox div:last-of-type {
+  main footer .footerLeft .fLF .divBox div:last-of-type {
     width: 18px;
     height: 10px;
   }
 }
-main footer .footerLeft hgroup h3 a {
+main footer .footerLeft .fLF h3 a {
+  color: red;
   text-decoration: none;
   font-family: var(--font-family-manrope);
   font-weight: var(--manrope-weight-bold);
   font-size: var(--font-size-h1);
-  text-shadow: 0px 0px 1px var(--color-black);
+  text-shadow: 0px 0px 1px var(--color-darkBlue);
   color: var(--color-darkBlue);
   cursor: pointer;
 }
 @media only screen and (max-width: 768px) {
-  main footer .footerLeft hgroup h3 a {
+  main footer .footerLeft .fLF h3 a {
     font-family: var(--font-family-manrope);
     font-weight: var(--manrope-weight-bold);
     font-size: var(--font-size-h1-mobile);
@@ -1709,6 +1751,7 @@ main footer .footerRight dl {
 main footer .footerRight dl dt {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
+  color: var(--color-darkBlue);
   font-weight: var(--openSans-weight-bold);
   padding: 10px 0px;
 }

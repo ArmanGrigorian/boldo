@@ -117,6 +117,27 @@ html {
                     li {
                         list-style-type: none;
 
+                        button{
+                            background-color: transparent;
+                            border: none;
+                        };
+
+                        a, button {
+                            @include fnt.p;
+                            font-weight: var(--openSans-weight-semiBold);
+                            color: var(--color-white);
+                            text-decoration: none;
+                            transition: var(--transition-color);
+
+                            &:hover {
+                                color: var(--color-green);
+                            }
+
+                            @media only screen and (max-width: 768px) {
+                                @include fnt.pMobile;
+                            }
+                        }
+
                         &:last-of-type > a {
                             padding: calc(var(--padding-thin) * 4) calc(var(--padding-mid) * 3);
                             color: var(--color-darkBlue);
@@ -130,22 +151,6 @@ html {
 
                             @media only screen and (max-width: 768px) {
                                 padding: var(--padding-thin) var(--padding-mid);
-                            }
-                        }
-
-                        a {
-                            @include fnt.p;
-                            font-weight: var(--openSans-weight-semiBold);
-                            color: var(--color-white);
-                            text-decoration: none;
-                            transition: var(--transition-color);
-
-                            &:hover {
-                                color: var(--color-green);
-                            }
-
-                            @media only screen and (max-width: 768px) {
-                                @include fnt.pMobile;
                             }
                         }
                     }
@@ -168,6 +173,7 @@ html {
             h2,
             p {
                 width: 100%;
+                color: var(--color-white);
                 text-align: center;
                 letter-spacing: 1px;
             }
@@ -286,7 +292,20 @@ html {
                 }
 
                 & > p:first-of-type {
+                    color: var(--color-grey);
                     padding-bottom: var(--padding-mid);
+                }
+
+                h2 {
+                    margin: 0 auto;
+                    color: var(--color-darkBlue);
+                    width: 80%;
+                    @include fnt.h2;
+
+                    @media only screen and (max-width: 768px) {
+                        width: 100%;
+                        @include fnt.h2Mobile;
+                    }
                 }
 
                 p {
@@ -303,17 +322,6 @@ html {
                         padding-top: var(--padding-mid);
                         @include fnt.pMobile;
                         line-height: normal;
-                    }
-                }
-
-                h2 {
-                    margin: 0 auto;
-                    width: 80%;
-                    @include fnt.h2;
-
-                    @media only screen and (max-width: 768px) {
-                        width: 100%;
-                        @include fnt.h2Mobile;
                     }
                 }
             }
@@ -338,6 +346,7 @@ html {
                 p {
                     text-align: center;
                     letter-spacing: 1px;
+                    color: var(--color-white);
                     text-shadow: 0px 0px 1px var(--color-black);
                 }
 
@@ -443,6 +452,18 @@ html {
                     padding-bottom: var(--padding-mid);
                 }
 
+                h2 {
+                    margin: 0 auto;
+                    width: 80%;
+                    color: var(--color-darkBlue);
+                    @include fnt.h2;
+
+                    @media only screen and (max-width: 768px) {
+                        width: 100%;
+                        @include fnt.h2Mobile;
+                    }
+                }
+
                 p {
                     color: var(--color-grey);
                     margin: 0 auto;
@@ -458,18 +479,6 @@ html {
                         @include fnt.pMobile;
                         line-height: normal;
                     }
-                }
-
-                h2 {
-                    margin: 0 auto;
-                    width: 80%;
-                    @include fnt.h2;
-
-                    @media only screen and (max-width: 768px) {
-                        width: 100%;
-                        @include fnt.h2Mobile;
-                    }
-
                 }
             }
 
@@ -495,13 +504,12 @@ html {
 
                     strong {
                         @include fnt.strong;
+                        color: var(--color-darkBlue);
                         font-weight: var(--openSans-weight-semiBold);
 
                         @media only screen and (max-width: 768px) {
                             @include fnt.strongMobile;
                         }
-
-
                     }
 
                     p {
@@ -529,7 +537,6 @@ html {
             }
 
             hgroup {
-                color: var(--color-white);
                 padding: calc(var(--padding-mid) * 4) 0px;
 
                 @media only screen and (max-width: 1152px) {
@@ -541,10 +548,24 @@ html {
                 }
 
                 & > p:first-of-type {
+                    color: var(--color-white);
                     padding-bottom: var(--padding-mid);
                 }
 
+                h2 {
+                    color: var(--color-white);
+                    margin: 0 auto;
+                    width: 80%;
+                    @include fnt.h2;
+
+                    @media only screen and (max-width: 768px) {
+                        width: 100%;
+                        @include fnt.h2Mobile;
+                    }
+                }
+
                 p {
+                    color: var(--color-white);
                     margin: 0 auto;
                     width: 80%;
                     @include fnt.p;
@@ -557,17 +578,6 @@ html {
                         padding-top: var(--padding-mid);
                         @include fnt.pMobile;
                         line-height: normal;
-                    }
-                }
-
-                h2 {
-                    margin: 0 auto;
-                    width: 80%;
-                    @include fnt.h2;
-
-                    @media only screen and (max-width: 768px) {
-                        width: 100%;
-                        @include fnt.h2Mobile;
                     }
                 }
             }
@@ -586,7 +596,6 @@ html {
 
                 & > div {
                     width: 80%;
-                    color: var(--color-white);
                     @include mxs.rowFlex(start, center, 10px);
 
                     img {
@@ -597,6 +606,7 @@ html {
 
                     div {
                         strong {
+                            color: var(--color-white);
                             @include fnt.strong;
                             text-shadow: 0px 0px 1px var(--color-black);
 
@@ -606,6 +616,7 @@ html {
                         }
 
                         p {
+                            color: var(--color-white);
                             @include fnt.p;
                             font-weight: var(--openSans-weight-regular);
                             text-shadow: 0px 0px 1px var(--color-black);
@@ -824,6 +835,7 @@ html {
                 dt {
                     @include fnt.button;
                     font-weight: var(--openSans-weight-bold);
+                    color: var(--color-darkBlue);
                     padding: 10px 0px;
 
                     @media only screen and (max-width: 768px) {

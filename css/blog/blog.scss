@@ -180,6 +180,7 @@ main {
 
             h2 {
                 @include fnt.h2;
+                color: var(--color-darkBlue);
                 text-shadow: 0px 0px 1px var(--color-black);
                 padding: calc(var(--padding-mid) * 1) 0px;
                 text-align: center;
@@ -191,6 +192,7 @@ main {
 
             p {
                 @include fnt.p;
+                color: var(--color-darkBlue);
                 font-weight: var(--openSans-weight-regular);
                 text-shadow: 0px 0px 1px var(--color-black);
                 padding: calc(var(--padding-mid) * 1) 0px;
@@ -243,6 +245,7 @@ main {
                     padding-top: var(--padding-mid);
 
                     strong {
+                        color: var(--color-darkBlue);
                         padding-right: var(--padding-mid);
                         @include fnt.p;
                         font-weight: var(--openSans-weight-bold);
@@ -265,6 +268,7 @@ main {
 
                 h3 {
                     @include fnt.h3;
+                    color: var(--color-darkBlue);
                     font-weight: var(--openSans-weight-regular);
                     padding: var(--padding-mid) 0px;
 
@@ -279,6 +283,7 @@ main {
 
                     p {
                         @include fnt.p;
+                        color: var(--color-darkBlue);
                         font-weight: var(--openSans-weight-regular);
 
                         @media only screen and (max-width: 768px) {
@@ -293,6 +298,7 @@ main {
 
             h3 {
                 text-align: center;
+                color: var(--color-darkBlue);
                 padding-top: calc(var(--padding-mid) * 9);
                 padding-bottom: calc(var(--padding-mid) * 5);
                 @include fnt.h3;
@@ -338,6 +344,7 @@ main {
                         strong {
                             padding-right: var(--padding-mid);
                             @include fnt.p;
+                            color: var(--color-darkBlue);
                             font-weight: var(--openSans-weight-bold);
 
                             @media only screen and (max-width: 768px) {
@@ -358,6 +365,7 @@ main {
 
                     & > p:nth-of-type(2) {
                         @include fnt.button;
+                        color: var(--color-darkBlue);
                         font-weight: var(--openSans-weight-regular);
                         padding: var(--padding-mid) 0px;
 
@@ -372,6 +380,7 @@ main {
 
                         p {
                             @include fnt.p;
+                            color: var(--color-darkBlue);
                             font-weight: var(--openSans-weight-regular);
 
                             @media only screen and (max-width: 768px) {
@@ -603,6 +612,7 @@ main {
 
                 dt {
                     @include fnt.button;
+                    color: var(--color-darkBlue);
                     font-weight: var(--openSans-weight-bold);
                     padding: 10px 0px;
 

@@ -10,9 +10,10 @@
 
 html {
     scroll-behavior: smooth;
-}
+};
 
 main {
+    background-color: var(--color-main-white);
     margin: 0 auto;
     max-width: 1320px;
 
@@ -37,6 +38,7 @@ main {
                 @include mxs.rowFlex(center, center);
 
                 .divBox {
+
                     div {
                         background-color: var(--color-green);
                         border-radius: 0px 12px 12px 0px;
@@ -79,7 +81,7 @@ main {
                     a {
                         text-decoration: none;
                         @include fnt.h1;
-                        text-shadow: 0px 0px 1px var(--color-black);
+                        text-shadow: 0px 0px 1px var(--color-darkBlue);
                         color: var(--color-white);
                         cursor: pointer;
 
@@ -106,6 +108,27 @@ main {
                     li {
                         list-style-type: none;
 
+                        button{
+                            background-color: transparent;
+                            border: none;
+                        };
+
+                        a, button {
+                            @include fnt.p;
+                            font-weight: var(--openSans-weight-semiBold);
+                            color: var(--color-white);
+                            text-decoration: none;
+                            transition: var(--transition-color);
+
+                            &:hover {
+                                color: var(--color-green);
+                            }
+
+                            @media only screen and (max-width: 768px) {
+                                @include fnt.pMobile;
+                            }
+                        }
+
                         &:last-of-type > a {
                             padding: calc(var(--padding-thin) * 4) calc(var(--padding-mid) * 3);
                             color: var(--color-darkBlue);
@@ -119,22 +142,6 @@ main {
 
                             @media only screen and (max-width: 768px) {
                                 padding: var(--padding-thin) var(--padding-mid);
-                            }
-                        }
-
-                        a {
-                            @include fnt.p;
-                            font-weight: var(--openSans-weight-semiBold);
-                            color: var(--color-white);
-                            text-decoration: none;
-                            transition: var(--transition-color);
-
-                            &:hover {
-                                color: var(--color-green);
-                            }
-
-                            @media only screen and (max-width: 768px) {
-                                @include fnt.pMobile;
                             }
                         }
                     }
@@ -153,7 +160,6 @@ main {
 
             .headerMidLft {
                 width: 48%;
-                color: var(--color-white);
                 @include mxs.colFlex(center, start, 30px);
 
                 @media only screen and (max-width: 1152px) {
@@ -166,7 +172,9 @@ main {
 
                 h2 {
                     @include fnt.h2;
-                    text-shadow: 0px 0px 1px var(--color-black);
+                    color: var(--color-white);
+                    font-weight: 600;
+                    text-shadow: 0px 0px 1px var(--color-darkBlue);
 
                     @media only screen and (max-width: 768px) {
                         @include fnt.h2Mobile;
@@ -175,8 +183,9 @@ main {
 
                 p {
                     @include fnt.p;
+                    color: var(--color-white);
                     font-weight: var(--openSans-weight-regular);
-                    text-shadow: 0px 0px 1px var(--color-black);
+                    text-shadow: 0px 0px 1px var(--color-darkBlue);
 
                     @media only screen and (max-width: 768px) {
                         @include fnt.pMobile;
@@ -249,7 +258,7 @@ main {
                     border-radius: var(--border-radius);
                     margin-bottom: calc(var(--margin-mid) * 2);
                     padding: calc(var(--padding-thin) * 7);
-                    box-shadow: inset 0px 0px 3px 1px var(--color-black);
+                    box-shadow: inset 0px 0px 3px 1px var(--color-darkBlue);
 
                     @media only screen and (max-width: 1152px) {
                         height: 171px;
@@ -359,7 +368,7 @@ main {
                                 color: var(--color-white);
                                 @include fnt.p;
                                 font-weight: var(--manrope-weight-bold);
-                                text-shadow: 0px 0px 1px var(--color-black);
+                                text-shadow: 0px 0px 1px var(--color-darkBlue);
 
                                 @media only screen and (max-width: 1152px) {
                                     @include fnt.pMobile;
@@ -385,7 +394,7 @@ main {
                         background-color: var(--color-skyGreyBack);
                         border-radius: var(--border-radius);
                         padding: calc(var(--padding-thin) * 7);
-                        box-shadow: inset 0px 0px 3px 1px var(--color-black);
+                        box-shadow: inset 0px 0px 3px 1px var(--color-darkBlue);
                     }
 
                     .leftBox {
@@ -502,7 +511,7 @@ main {
                                     height: 80px;
                                     border-top: 10px solid var(--color-green);
                                     border-right: 10px solid var(--color-green);
-                                    border-bottom: 10px solid var(--color-black);
+                                    border-bottom: 10px solid var(--color-darkBlue);
                                     border-left: 10px solid var(--color-skyBlue);
                                     border-radius: 50%;
                                     animation: circle 10000ms linear infinite;
@@ -512,7 +521,7 @@ main {
                                         height: 60px;
                                         border-top: 8px solid var(--color-green);
                                         border-right: 8px solid var(--color-green);
-                                        border-bottom: 8px solid var(--color-black);
+                                        border-bottom: 8px solid var(--color-darkBlue);
                                         border-left: 8px solid var(--color-skyBlue);
                                     }
 
@@ -521,7 +530,7 @@ main {
                                         height: 50px;
                                         border-top: 7px solid var(--color-green);
                                         border-right: 7px solid var(--color-green);
-                                        border-bottom: 7px solid var(--color-black);
+                                        border-bottom: 7px solid var(--color-darkBlue);
                                         border-left: 7px solid var(--color-skyBlue);
                                     }
 
@@ -569,11 +578,12 @@ main {
 
         .headerBtm {
             width: 100%;
+            background-color: rgb(10, 38, 64);
             overflow: hidden;
-
+            
             .slider {
                 width: max-content;
-
+                
                 img {
                     animation: slider 100000ms linear infinite;
 
@@ -616,6 +626,7 @@ main {
                 width: 80%;
                 margin: 0 auto;
                 text-align: center;
+                color: var(--color-darkBlue);
                 @include fnt.h2;
 
                 @media only screen and (max-width: 768px) {
@@ -661,8 +672,9 @@ main {
                     }
                 }
 
-                strong {
+                h4 {
                     @include fnt.strong;
+                    color: var(--color-darkBlue);
                     font-weight: var(--openSans-weight-regular);
 
                     @media only screen and (max-width: 768px) {
@@ -765,8 +777,9 @@ main {
                     margin-top: calc(var(--margin-mid) * 5);
                 }
 
-                strong {
+                h4 {
                     @include fnt.h3;
+                    color: var(--color-darkBlue);
                     font-weight: var(--manrope-weight-regular);
 
                     @media only screen and (max-width: 768px) {
@@ -779,6 +792,7 @@ main {
                     li {
                         list-style-type: none;
                         @include fnt.button;
+                        color: var(--color-white);
                         font-weight: var(--openSans-weight-regular);
 
                         @media only screen and (max-width: 768px) {
@@ -842,8 +856,9 @@ main {
                     margin-bottom: calc(var(--margin-mid) * 2);
                 }
 
-                strong {
+                h4 {
                     @include fnt.h3;
+                    color: var(--color-darkBlue);
                     font-weight: var(--manrope-weight-regular);
 
                     @media only screen and (max-width: 768px) {
@@ -857,6 +872,7 @@ main {
                     }
 
                     li {
+                        color: var(--color-darkBlue);
                         list-style-type: none;
                         @include fnt.button;
                         font-weight: var(--openSans-weight-regular);
@@ -876,7 +892,7 @@ main {
                                 color: var(--color-white);
                             }
                         }
-                        
+
                         @media only screen and (max-width: 1152px) {
                             @include fnt.buttonMobile;
                         }
@@ -952,7 +968,7 @@ main {
                     font-weight: var(--manrope-weight-regular);
                     color: var(--color-white);
                     padding-bottom: var(--padding-mid);
-                    text-shadow: 0px 0px 2px var(--color-black);
+                    text-shadow: 0px 0px 2px var(--color-darkBlue);
 
                     @media only screen and (max-width: 1152px) {
                         width: 84%;
@@ -1006,7 +1022,7 @@ main {
                     padding: calc(var(--padding-mid) * 4);
                     border-radius: 12px;
                     background-color: var(--color-white);
-                    box-shadow: 0px 0px 5px 1px var(--color-black);
+                    box-shadow: 0px 0px 5px 1px var(--color-darkBlue);
                     transition: transform 200ms ease-in-out;
 
                     &:hover {
@@ -1019,10 +1035,11 @@ main {
 
                     @media only screen and (max-width: 768px) {
                         width: 90%;
-                        box-shadow: inset 0px 0px 5px 1px var(--color-black);
+                        box-shadow: inset 0px 0px 5px 1px var(--color-darkBlue);
                     }
 
                     & > p {
+                        color: var(--color-darkBlue);
                         padding-bottom: calc(var(--padding-mid) * 4);
                         font-family: var(--font-family-openSans);
                         font-size: var(--font-size-strong);
@@ -1045,7 +1062,7 @@ main {
                             padding: var(--padding-mid);
                             @include mxs.colFlex(space-between, start);
 
-                            strong {
+                            h4 {
                                 font-family: var(--font-family-openSans);
                                 font-size: var(--font-size-p);
                                 font-weight: var(--openSans-weight-bold);
@@ -1103,6 +1120,7 @@ main {
 
                 h3 {
                     width: 42%;
+                    color: var(--color-darkBlue);
                     @include fnt.h3;
 
                     @media only screen and (max-width: 768px) {
@@ -1125,6 +1143,7 @@ main {
                         padding: var(--padding-mid) 0px;
                         margin: var(--margin-mid);
                         list-style-type: none;
+                        color: var(--color-darkBlue);
                         border-bottom: 1px solid rgb(196, 196, 196);
 
                         @media only screen and (max-width: 768px) {
@@ -1139,7 +1158,7 @@ main {
     .secTwo {
         padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
         @include mxs.colFlex(center, center, 60px);
-        
+
         @media only screen and (max-width: 1152px) {
             padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 3);
             gap: 50px;
@@ -1173,6 +1192,7 @@ main {
                 margin: 0 auto;
                 width: 80%;
                 text-align: center;
+                color: var(--color-darkBlue);
                 @include fnt.h2;
 
                 @media only screen and (max-width: 768px) {
@@ -1205,32 +1225,31 @@ main {
                         aspect-ratio: 1;
                     }
 
-                    & > p:nth-of-type(1) {
-                        padding-top: var(--padding-mid);
+                    & > h4 {
+                        padding-right: var(--padding-mid);
+                        @include fnt.p;
+                        color: var(--color-darkBlue);
+                        font-weight: var(--openSans-weight-bold);
 
-                        strong {
-                            padding-right: var(--padding-mid);
-                            @include fnt.p;
-                            font-weight: var(--openSans-weight-bold);
-
-                            @media only screen and (max-width: 768px) {
-                                @include fnt.pMobile;
-                            }
-                        }
-
-                        time {
-                            @include fnt.p;
-                            font-weight: var(--openSans-weight-regular);
-                            color: var(--color-grey);
-
-                            @media only screen and (max-width: 768px) {
-                                @include fnt.pMobile;
-                            }
+                        @media only screen and (max-width: 768px) {
+                            @include fnt.pMobile;
                         }
                     }
 
-                    & > p:nth-of-type(2) {
+                    & > time {
+                        @include fnt.p;
+                        font-weight: var(--openSans-weight-regular);
+                        color: var(--color-grey);
+
+                        @media only screen and (max-width: 768px) {
+                            @include fnt.pMobile;
+                        }
+                    }
+
+
+                    & > p {
                         @include fnt.button;
+                        color: var(--color-darkBlue);
                         font-weight: var(--openSans-weight-regular);
                         padding: var(--padding-mid) 0px;
 
@@ -1245,6 +1264,7 @@ main {
 
                         p {
                             @include fnt.p;
+                            color: var(--color-darkBlue);
                             font-weight: var(--openSans-weight-regular);
 
                             @media only screen and (max-width: 768px) {
@@ -1285,6 +1305,7 @@ main {
             position: relative;
             overflow: hidden;
             width: 100%;
+            border-radius: 20px;
             background-color: var(--color-darkBlue);
             padding: calc(var(--padding-mid) * 8) calc(var(--padding-mid) * 12);
 
@@ -1387,7 +1408,7 @@ main {
                 width: 100%;
             }
 
-            hgroup {
+            .fLF {
                 @include mxs.rowFlex(start, center);
 
                 .divBox {
@@ -1428,13 +1449,15 @@ main {
                             }
                         }
                     }
+
                 }
 
                 h3 {
                     a {
+                        color: red;
                         text-decoration: none;
                         @include fnt.h1;
-                        text-shadow: 0px 0px 1px var(--color-black);
+                        text-shadow: 0px 0px 1px var(--color-darkBlue);
                         color: var(--color-darkBlue);
                         cursor: pointer;
 
@@ -1443,6 +1466,7 @@ main {
                         }
                     }
                 }
+
             }
 
             p {
@@ -1470,6 +1494,7 @@ main {
 
                 dt {
                     @include fnt.button;
+                    color: var(--color-darkBlue);
                     font-weight: var(--openSans-weight-bold);
                     padding: 10px 0px;
 
@@ -1521,4 +1546,3 @@ main {
         }
     }
 }
-
