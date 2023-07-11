@@ -792,7 +792,7 @@ main {
                     li {
                         list-style-type: none;
                         @include fnt.button;
-                        color: var(--color-white);
+                        color: var(--color-darkBlue);
                         font-weight: var(--openSans-weight-regular);
 
                         @media only screen and (max-width: 768px) {

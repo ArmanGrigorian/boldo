@@ -943,7 +943,7 @@ main .secOne .artTwo .artTwoRight ul li {
   list-style-type: none;
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
-  color: var(--color-white);
+  color: var(--color-darkBlue);
   font-weight: var(--openSans-weight-regular);
 }
 @media only screen and (max-width: 768px) {

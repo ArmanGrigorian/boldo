@@ -1,0 +1,447 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-white: rgb(255, 255, 255);
+  --color-black: black;
+  --color-green: rgb(101, 228, 163);
+  --color-skyBlue: rgb(13, 187, 252);
+  --color-circle: rgb(69, 96, 121);
+  --color-darkBlue: rgb(10, 38, 64);
+  --color-grey: rgb(128, 128, 128);
+  --color-skyGreyBack: rgb(69, 96, 121);
+  --color-skyGreyDark: rgb(149, 171, 188);
+  --color-skyGreyLight: rgb(143, 182, 213);
+  --color-circle-orange: rgb(252, 91, 0);
+  --color-circle-yellow: rgb(236, 170, 0);
+  --color-circle-green: rgb(0, 157, 16);
+  --font-family-manrope: "Manrope", sans-serif;
+  --font-family-openSans: "Open Sans", sans-serif;
+  --manrope-weight-regular: 400;
+  --manrope-weight-bold: 700;
+  --openSans-weight-regular: 400;
+  --openSans-weight-semiBold: 600;
+  --openSans-weight-bold: 700;
+  --font-size-h1: clamp(32px, 4vw, 43px);
+  --font-size-h2: clamp(37px, 4vw, 48px);
+  --font-size-h3: clamp(25px, 2vw, 36px);
+  --font-size-strong: clamp(17px, 2vw, 24px);
+  --font-size-thin: clamp(10px, 2vw, 14px);
+  --font-size-p: clamp(12px, 2vw, 16px);
+  --font-size-buttons: clamp(15px, 1.4vw, 20px);
+  --font-size-h1-mobile: 23px;
+  --font-size-h2-mobile: 25px;
+  --font-size-h3-mobile: 21px;
+  --font-size-strong-mobile: 16px;
+  --font-size-thin-mobile: 10px;
+  --font-size-p-mobile: 12px;
+  --font-size-buttons-mobile: 13px;
+  --padding-thin: 2px;
+  --padding-mid: 10px;
+  --margin-thin: 2px;
+  --margin-mid: 10px;
+  --border-radius: 15px;
+  --transition-color: color 200ms ease-in-out;
+  --transition-both: color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0px;
+  animation: changePage 1000ms linear 1;
+}
+@keyframes changePage {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+main header {
+  padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
+  background-color: var(--color-darkBlue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+@media only screen and (max-width: 1152px) {
+  main header {
+    padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 3);
+  }
+}
+@media only screen and (max-width: 768px) {
+  main header {
+    padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 1);
+  }
+}
+main header hgroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+main header hgroup .divBox div {
+  background-color: var(--color-green);
+  border-radius: 0px 12px 12px 0px;
+  margin-right: var(--margin-thin);
+}
+main header hgroup .divBox div:first-of-type {
+  width: 18px;
+  height: 14px;
+  margin-bottom: calc(var(--margin-thin) + 1px);
+}
+@media only screen and (max-width: 1152px) {
+  main header hgroup .divBox div:first-of-type {
+    width: 15px;
+    height: 11px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main header hgroup .divBox div:first-of-type {
+    width: 13px;
+    height: 9px;
+  }
+}
+main header hgroup .divBox div:last-of-type {
+  width: 25px;
+  height: 17px;
+}
+@media only screen and (max-width: 1152px) {
+  main header hgroup .divBox div:last-of-type {
+    width: 22px;
+    height: 14px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main header hgroup .divBox div:last-of-type {
+    width: 18px;
+    height: 10px;
+  }
+}
+main header hgroup h1 a {
+  text-decoration: none;
+  font-family: var(--font-family-manrope);
+  font-weight: var(--manrope-weight-bold);
+  font-size: var(--font-size-h1);
+  text-shadow: 0px 0px 1px var(--color-black);
+  color: var(--color-white);
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  main header hgroup h1 a {
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-bold);
+    font-size: var(--font-size-h1-mobile);
+  }
+}
+main header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+@media only screen and (max-width: 1152px) {
+  main header nav ul {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main header nav ul {
+    gap: 10px;
+  }
+}
+main header nav ul li {
+  list-style-type: none;
+}
+main header nav ul li:last-of-type > a {
+  padding: calc(var(--padding-thin) * 4) calc(var(--padding-mid) * 3);
+  color: var(--color-darkBlue);
+  background-color: var(--color-white);
+  border-radius: 24px;
+  transition: var(--transition-both);
+}
+@media only screen and (max-width: 1152px) {
+  main header nav ul li:last-of-type > a {
+    padding: calc(var(--padding-thin) * 3) calc(var(--padding-mid) * 3);
+  }
+}
+@media only screen and (max-width: 768px) {
+  main header nav ul li:last-of-type > a {
+    padding: var(--padding-thin) var(--padding-mid);
+  }
+}
+main header nav ul li a {
+  font-family: var(--font-family-openSans);
+  font-size: var(--font-size-p);
+  font-weight: var(--openSans-weight-semiBold);
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+@media only screen and (max-width: 768px) {
+  main header nav ul li a {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-p-mobile);
+  }
+}
+main header nav ul li a:hover {
+  color: var(--color-green);
+}
+main section {
+  padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
+  background-color: var(--color-darkBlue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  background-color: var(--color-green);
+  color: var(--color-black);
+}
+@media only screen and (max-width: 1152px) {
+  main section {
+    padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 3);
+  }
+}
+@media only screen and (max-width: 768px) {
+  main section {
+    padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 1);
+  }
+}
+main section form {
+  margin: 0 auto;
+  width: 70%;
+  padding: calc(var(--padding-mid) * 3) 0px;
+}
+main section form fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  border: 3px solid var(--color-darkBlue);
+  background-color: var(--color-white);
+  padding: var(--padding-mid) 0px calc(var(--padding-mid) * 3);
+  margin-bottom: calc(var(--margin-mid) * 3);
+}
+main section form fieldset legend {
+  background-color: var(--color-white);
+  border-radius: 20px 0px 20px 0px;
+  padding: var(--padding-mid) calc(var(--padding-mid) * 2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+  border: 3px solid var(--color-darkBlue);
+  background-color: var(--color-darkBlue);
+  color: var(--color-white);
+}
+main section form .infoField input {
+  width: 80%;
+  padding: calc(var(--padding-thin) * 3) calc(var(--padding-thin) * 4);
+}
+main section form .genderField input,
+main section form .genderField label,
+main section form .langField input,
+main section form .langField label {
+  cursor: pointer;
+}
+main section form .emailField input {
+  width: 80%;
+  padding: calc(var(--padding-thin) * 3) calc(var(--padding-thin) * 4);
+}
+main section form div {
+  text-align: center;
+}
+main section form div input {
+  font-family: var(--font-family-openSans);
+  font-size: var(--font-size-buttons);
+  font-weight: var(--openSans-weight-bold);
+  padding: 14px 36px;
+  border-radius: 26px;
+  cursor: pointer;
+  color: var(--color-darkBlue);
+  background-color: var(--color-white);
+  transition: var(--transition-both);
+}
+main section form div input:hover {
+  color: var(--color-white);
+  background-color: var(--color-darkBlue);
+}
+@media only screen and (max-width: 768px) {
+  main section form div input {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-buttons);
+    font-weight: var(--openSans-weight-bold);
+    padding: 8px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+}
+main footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0px;
+  padding: calc(var(--padding-mid) * 4) calc(var(--padding-mid) * 10);
+}
+@media only screen and (max-width: 1152px) {
+  main footer {
+    padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 3);
+  }
+}
+@media only screen and (max-width: 768px) {
+  main footer {
+    padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 1);
+    flex-direction: column;
+    align-items: center;
+  }
+}
+main footer .footerLeft {
+  width: 40%;
+}
+@media only screen and (max-width: 768px) {
+  main footer .footerLeft {
+    width: 100%;
+  }
+}
+main footer .footerLeft hgroup {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0px;
+}
+main footer .footerLeft hgroup .divBox div {
+  background-color: var(--color-green);
+  border-radius: 0px 12px 12px 0px;
+  margin-right: var(--margin-thin);
+}
+main footer .footerLeft hgroup .divBox div:first-of-type {
+  width: 18px;
+  height: 14px;
+  margin-bottom: calc(var(--margin-thin) + 1px);
+}
+@media only screen and (max-width: 1152px) {
+  main footer .footerLeft hgroup .divBox div:first-of-type {
+    width: 15px;
+    height: 11px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main footer .footerLeft hgroup .divBox div:first-of-type {
+    width: 13px;
+    height: 9px;
+  }
+}
+main footer .footerLeft hgroup .divBox div:last-of-type {
+  width: 25px;
+  height: 17px;
+}
+@media only screen and (max-width: 1152px) {
+  main footer .footerLeft hgroup .divBox div:last-of-type {
+    width: 22px;
+    height: 14px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main footer .footerLeft hgroup .divBox div:last-of-type {
+    width: 18px;
+    height: 10px;
+  }
+}
+main footer .footerLeft hgroup h3 a {
+  text-decoration: none;
+  font-family: var(--font-family-manrope);
+  font-weight: var(--manrope-weight-bold);
+  font-size: var(--font-size-h1);
+  text-shadow: 0px 0px 1px var(--color-black);
+  color: var(--color-darkBlue);
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  main footer .footerLeft hgroup h3 a {
+    font-family: var(--font-family-manrope);
+    font-weight: var(--manrope-weight-bold);
+    font-size: var(--font-size-h1-mobile);
+  }
+}
+main footer .footerLeft p {
+  padding: var(--padding-mid) 0px;
+  color: var(--color-grey);
+  font-family: var(--font-family-openSans);
+  font-size: var(--font-size-p);
+}
+@media only screen and (max-width: 768px) {
+  main footer .footerLeft p {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-p-mobile);
+  }
+}
+main footer .footerRight {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0px;
+}
+@media only screen and (max-width: 768px) {
+  main footer .footerRight {
+    width: 100%;
+    text-align: center;
+  }
+}
+main footer .footerRight dl {
+  width: 30%;
+}
+main footer .footerRight dl dt {
+  font-family: var(--font-family-openSans);
+  font-size: var(--font-size-buttons);
+  font-weight: var(--openSans-weight-bold);
+  padding: 10px 0px;
+}
+@media only screen and (max-width: 768px) {
+  main footer .footerRight dl dt {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-buttons-mobile);
+  }
+}
+main footer .footerRight dl dd {
+  padding: 10px 0px;
+}
+main footer .footerRight dl dd:nth-of-type(1) a:hover {
+  color: var(--color-circle-orange);
+}
+main footer .footerRight dl dd:nth-of-type(2) a:hover {
+  color: var(--color-circle-yellow);
+}
+main footer .footerRight dl dd:nth-of-type(3) a:hover {
+  color: var(--color-circle-green);
+}
+main footer .footerRight dl dd a {
+  color: var(--color-grey);
+  text-decoration: none;
+  font-family: var(--font-family-openSans);
+  font-size: var(--font-size-buttons);
+  font-weight: var(--openSans-weight-regular);
+  transition: var(--transition-color);
+}
+@media only screen and (max-width: 768px) {
+  main footer .footerRight dl dd a {
+    font-family: var(--font-family-openSans);
+    font-size: var(--font-size-buttons-mobile);
+  }
+}/*# sourceMappingURL=login.css.map */
