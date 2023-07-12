@@ -988,6 +988,7 @@ html {
 }
 .aboutMain footer .footerRight dl {
   width: 30%;
+  text-align: center;
 }
 .aboutMain footer .footerRight dl dt {
   font-family: var(--font-family-openSans);

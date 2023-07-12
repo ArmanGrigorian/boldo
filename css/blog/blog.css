@@ -771,6 +771,7 @@ main footer .footerRight {
 }
 main footer .footerRight dl {
   width: 30%;
+  text-align: center;
 }
 main footer .footerRight dl dt {
   font-family: var(--font-family-openSans);

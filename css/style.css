@@ -188,7 +188,8 @@ main header .headerTop nav ul li button {
   background-color: transparent;
   border: none;
 }
-main header .headerTop nav ul li a, main header .headerTop nav ul li button {
+main header .headerTop nav ul li a,
+main header .headerTop nav ul li button {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
   font-weight: var(--openSans-weight-semiBold);
@@ -196,11 +197,13 @@ main header .headerTop nav ul li a, main header .headerTop nav ul li button {
   text-decoration: none;
   transition: var(--transition-color);
 }
-main header .headerTop nav ul li a:hover, main header .headerTop nav ul li button:hover {
+main header .headerTop nav ul li a:hover,
+main header .headerTop nav ul li button:hover {
   color: var(--color-green);
 }
 @media only screen and (max-width: 768px) {
-  main header .headerTop nav ul li a, main header .headerTop nav ul li button {
+  main header .headerTop nav ul li a,
+  main header .headerTop nav ul li button {
     font-family: var(--font-family-openSans);
     font-size: var(--font-size-p-mobile);
   }
@@ -713,7 +716,7 @@ main .secOne {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 140px;
+  gap: 100px;
 }
 @media only screen and (max-width: 768px) {
   main .secOne {
@@ -757,7 +760,7 @@ main .secOne .artOne {
   justify-content: space-between;
   align-items: center;
   gap: 0px;
-  padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
+  padding: calc(var(--padding-mid) * 2) 0px;
 }
 @media only screen and (max-width: 1152px) {
   main .secOne .artOne {
@@ -790,17 +793,14 @@ main .secOne .artOne div {
 }
 main .secOne .artOne div img {
   width: 100%;
-  height: 340px;
-}
-@media only screen and (max-width: 1152px) {
-  main .secOne .artOne div img {
-    height: 240px;
-  }
+  aspect-ratio: 8/10;
+  border-radius: 30px;
+  box-shadow: 0px 0px 2px 0px var(--color-darkBlue);
 }
 @media only screen and (max-width: 768px) {
   main .secOne .artOne div img {
-    height: auto;
-    aspect-ratio: 1;
+    max-width: 70%;
+    margin: 0 auto;
   }
 }
 main .secOne .artOne div h4 {
@@ -859,7 +859,7 @@ main .secOne .artTwo {
   justify-content: space-between;
   align-items: center;
   gap: 0px;
-  padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
+  padding: calc(var(--padding-mid) * 2) 0px;
 }
 @media only screen and (max-width: 1152px) {
   main .secOne .artTwo {
@@ -873,7 +873,7 @@ main .secOne .artTwo {
   }
 }
 main .secOne .artTwo .artTwoLeft {
-  width: 50%;
+  width: min(50%, 380px);
   min-height: 470px;
   background-image: url("../img/manWithPhone.jpg");
   background-repeat: no-repeat;
@@ -881,6 +881,7 @@ main .secOne .artTwo .artTwoLeft {
   background-position: center top;
   border-radius: 28px;
   position: relative;
+  box-shadow: 0px 0px 2px 0px var(--color-darkBlue);
 }
 @media only screen and (max-width: 768px) {
   main .secOne .artTwo .artTwoLeft {
@@ -888,11 +889,10 @@ main .secOne .artTwo .artTwoLeft {
   }
 }
 main .secOne .artTwo .artTwoLeft img {
-  width: max(280px, 50%);
-  height: 80%;
+  width: max(270px, 46%);
   position: absolute;
-  right: 1%;
-  bottom: -130px;
+  left: 0px;
+  bottom: -100px;
 }
 @media only screen and (max-width: 1152px) {
   main .secOne .artTwo .artTwoLeft img {
@@ -989,7 +989,7 @@ main .secOne .artThree {
   justify-content: space-between;
   align-items: center;
   gap: 0px;
-  padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
+  padding: calc(var(--padding-mid) * 2) 0px;
 }
 @media only screen and (max-width: 1152px) {
   main .secOne .artThree {
@@ -1074,7 +1074,7 @@ main .secOne .artThree .artThreeLeft ul li i {
   color: var(--color-darkBlue);
 }
 main .secOne .artThree .artThreeRight {
-  width: 50%;
+  width: min(50%, 380px);
   min-height: 470px;
   background-image: url("../img/womanWithPhone.jpg");
   background-repeat: no-repeat;
@@ -1082,6 +1082,7 @@ main .secOne .artThree .artThreeRight {
   background-position: center top;
   border-radius: 28px;
   position: relative;
+  box-shadow: 0px 0px 2px 0px var(--color-darkBlue);
 }
 @media only screen and (max-width: 768px) {
   main .secOne .artThree .artThreeRight {
@@ -1089,11 +1090,10 @@ main .secOne .artThree .artThreeRight {
   }
 }
 main .secOne .artThree .artThreeRight img {
-  width: max(280px, 50%);
-  height: 78%;
+  width: max(270px, 46%);
   position: absolute;
-  right: 1%;
-  bottom: -130px;
+  right: 0px;
+  bottom: -100px;
 }
 @media only screen and (max-width: 1152px) {
   main .secOne .artThree .artThreeRight img {
@@ -1108,6 +1108,7 @@ main .secOne .artThree .artThreeRight img {
   }
 }
 main .secOne .artFour {
+  margin-top: 20px;
   width: 100%;
   min-height: 800px;
   background-color: var(--color-darkBlue);
@@ -1270,7 +1271,7 @@ main .secOne .artFour .artFourBottom > div div div p {
 }
 main .secOne .artFive {
   width: 100%;
-  padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
+  padding: calc(var(--padding-mid) * 2) 0px;
 }
 @media only screen and (max-width: 1152px) {
   main .secOne .artFive {
@@ -1346,7 +1347,7 @@ main .secOne .artFive div ul li {
   }
 }
 main .secTwo {
-  padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
+  padding: calc(var(--padding-mid) * 2) 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1367,7 +1368,6 @@ main .secTwo {
 }
 main .secTwo .secTwoTop p {
   text-align: center;
-  padding-top: calc(var(--padding-mid) * 8);
   padding-bottom: calc(var(--padding-mid) * 6);
   color: var(--color-grey);
   font-family: var(--font-family-openSans);
@@ -1428,9 +1428,12 @@ main .secTwo .artSix .artSixContainer > div {
 }
 main .secTwo .artSix .artSixContainer > div > img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 9/10;
+  box-shadow: 0px 0px 3px 1px var(--color-darkBlue);
+  border-radius: 32px;
 }
 main .secTwo .artSix .artSixContainer > div > h4 {
+  padding-top: 10px;
   padding-right: var(--padding-mid);
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-p);
@@ -1527,7 +1530,7 @@ main .secTwo .artSeven {
   width: 100%;
   border-radius: 20px;
   background-color: var(--color-darkBlue);
-  padding: calc(var(--padding-mid) * 8) calc(var(--padding-mid) * 12);
+  padding: calc(var(--padding-mid) * 8) 0px;
 }
 @media only screen and (max-width: 1152px) {
   main .secTwo .artSeven {
@@ -1748,6 +1751,7 @@ main footer .footerRight {
 }
 main footer .footerRight dl {
   width: 30%;
+  text-align: center;
 }
 main footer .footerRight dl dt {
   font-family: var(--font-family-openSans);
