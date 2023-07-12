@@ -14,7 +14,7 @@ html {
 
 main {
     margin: 0 auto;
-    max-width: 1120px;
+    max-width: 1220px;
     @include mxs.colFlex(space-between);
     animation: changePage 1000ms linear 1;
 

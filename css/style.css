@@ -77,7 +77,7 @@ html {
 main {
   background-color: var(--color-main-white);
   margin: 0 auto;
-  max-width: 1120px;
+  max-width: 1220px;
 }
 main header {
   padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
