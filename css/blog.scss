@@ -1,11 +1,61 @@
-@use "../modules/mixins" as mxs;
-@use "../modules/fonts" as fnt;
-@use "../modules/variables";
+@use "./modules/mixins" as mxs;
+@use "./modules/fonts" as fnt;
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+:root {
+    //colors
+    --color-white: rgb(255, 255, 255);
+    --color-black: black;
+    --color-green: rgb(101, 228, 163);
+    --color-skyBlue: rgb(13, 187, 252);
+    --color-circle: rgb(69, 96, 121);
+    --color-darkBlue: rgb(10, 38, 64);
+    --color-grey: rgb(128, 128, 128);
+    --color-skyGreyBack: rgb(69, 96, 121);
+    --color-skyGreyDark: rgb(149, 171, 188);
+    --color-skyGreyLight: rgb(143, 182, 213);
+    --color-circle-orange: rgb(252, 91, 0);
+    --color-circle-yellow: rgb(236, 170, 0);
+    --color-circle-green: rgb(0, 157, 16);
+    //fonts
+    --font-family-manrope: "Manrope", sans-serif;
+    --font-family-openSans: "Open Sans", sans-serif;
+    //units
+    --manrope-weight-regular: 400;
+    --manrope-weight-bold: 700;
+    --openSans-weight-regular: 400;
+    --openSans-weight-semiBold: 600;
+    --openSans-weight-bold: 700;
+    //
+    --font-size-h1: clamp(32px, 4vw, 43px);
+    --font-size-h2: clamp(37px, 4vw, 48px);
+    --font-size-h3: clamp(25px, 2vw, 36px);
+    --font-size-strong: clamp(17px, 2vw, 24px);
+    --font-size-thin: clamp(10px, 2vw, 14px);
+    --font-size-p: clamp(12px, 2vw, 16px);
+    --font-size-buttons: clamp(15px, 1.4vw, 20px);
+    //
+    --font-size-h1-mobile: 23px;
+    --font-size-h2-mobile: 25px;
+    --font-size-h3-mobile: 21px;
+    --font-size-strong-mobile: 16px;
+    --font-size-thin-mobile: 10px;
+    --font-size-p-mobile: 12px;
+    --font-size-buttons-mobile: 13px;
+    //
+    --padding-thin: 2px;
+    --padding-mid: 10px;
+    --margin-thin: 2px;
+    --margin-mid: 10px;
+    --border-radius: 15px;
+    // transition
+    --transition-color: color 200ms ease-in-out;
+    --transition-both: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
 html {
@@ -14,7 +64,7 @@ html {
 
 main {
     margin: 0 auto;
-    max-width: 1120px;
+    max-width: 1320px;
     animation: changePage 500ms ease-out 1;
 
     @keyframes changePage {
@@ -142,12 +192,12 @@ main {
                         text-decoration: none;
                         transition: var(--transition-color);
 
-                        &:hover {
-                            color: var(--color-green);
-                        }
-
                         @media only screen and (max-width: 768px) {
                             @include fnt.pMobile;
+                        }
+
+                        &:hover {
+                            color: var(--color-green);
                         }
                     }
                 }
@@ -180,7 +230,6 @@ main {
 
             h2 {
                 @include fnt.h2;
-                color: var(--color-darkBlue);
                 text-shadow: 0px 0px 1px var(--color-black);
                 padding: calc(var(--padding-mid) * 1) 0px;
                 text-align: center;
@@ -192,7 +241,6 @@ main {
 
             p {
                 @include fnt.p;
-                color: var(--color-darkBlue);
                 font-weight: var(--openSans-weight-regular);
                 text-shadow: 0px 0px 1px var(--color-black);
                 padding: calc(var(--padding-mid) * 1) 0px;
@@ -245,7 +293,6 @@ main {
                     padding-top: var(--padding-mid);
 
                     strong {
-                        color: var(--color-darkBlue);
                         padding-right: var(--padding-mid);
                         @include fnt.p;
                         font-weight: var(--openSans-weight-bold);
@@ -268,7 +315,6 @@ main {
 
                 h3 {
                     @include fnt.h3;
-                    color: var(--color-darkBlue);
                     font-weight: var(--openSans-weight-regular);
                     padding: var(--padding-mid) 0px;
 
@@ -283,7 +329,6 @@ main {
 
                     p {
                         @include fnt.p;
-                        color: var(--color-darkBlue);
                         font-weight: var(--openSans-weight-regular);
 
                         @media only screen and (max-width: 768px) {
@@ -298,7 +343,6 @@ main {
 
             h3 {
                 text-align: center;
-                color: var(--color-darkBlue);
                 padding-top: calc(var(--padding-mid) * 9);
                 padding-bottom: calc(var(--padding-mid) * 5);
                 @include fnt.h3;
@@ -344,7 +388,6 @@ main {
                         strong {
                             padding-right: var(--padding-mid);
                             @include fnt.p;
-                            color: var(--color-darkBlue);
                             font-weight: var(--openSans-weight-bold);
 
                             @media only screen and (max-width: 768px) {
@@ -365,7 +408,6 @@ main {
 
                     & > p:nth-of-type(2) {
                         @include fnt.button;
-                        color: var(--color-darkBlue);
                         font-weight: var(--openSans-weight-regular);
                         padding: var(--padding-mid) 0px;
 
@@ -380,7 +422,6 @@ main {
 
                         p {
                             @include fnt.p;
-                            color: var(--color-darkBlue);
                             font-weight: var(--openSans-weight-regular);
 
                             @media only screen and (max-width: 768px) {
@@ -453,7 +494,10 @@ main {
                 color: var(--color-white);
                 text-align: center;
                 z-index: 2;
+
                 padding-bottom: calc(var(--padding-mid) * 4);
+
+                @media only screen and (max-width: 1152px) {}
 
                 @media only screen and (max-width: 768px) {
                     @include fnt.h2Mobile;
@@ -482,6 +526,7 @@ main {
                     @include mxs.button;
                     transition: var(--transition-both);
                     cursor: auto;
+
 
                     @media only screen and (max-width: 768px) {
                         @include mxs.buttonMobile;
@@ -595,7 +640,9 @@ main {
                 @media only screen and (max-width: 768px) {
                     @include fnt.pMobile;
                 }
+
             }
+
         }
 
         .footerRight {
@@ -612,7 +659,6 @@ main {
 
                 dt {
                     @include fnt.button;
-                    color: var(--color-darkBlue);
                     font-weight: var(--openSans-weight-bold);
                     padding: 10px 0px;
 

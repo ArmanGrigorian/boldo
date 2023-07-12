@@ -15,7 +15,7 @@ html {
 main {
     background-color: var(--color-main-white);
     margin: 0 auto;
-    max-width: 1320px;
+    max-width: 1120px;
 
     header {
         padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
@@ -174,7 +174,7 @@ main {
                     @include fnt.h2;
                     color: var(--color-white);
                     font-weight: 600;
-                    text-shadow: 0px 0px 1px var(--color-darkBlue);
+                    text-shadow: 0px 1px 1px var(--color-darkBlue);
 
                     @media only screen and (max-width: 768px) {
                         @include fnt.h2Mobile;
@@ -185,7 +185,8 @@ main {
                     @include fnt.p;
                     color: var(--color-white);
                     font-weight: var(--openSans-weight-regular);
-                    text-shadow: 0px 0px 1px var(--color-darkBlue);
+                    text-shadow: 0px 1px 1px var(--color-darkBlue);
+                    letter-spacing: 1px;
 
                     @media only screen and (max-width: 768px) {
                         @include fnt.pMobile;
@@ -792,7 +793,7 @@ main {
                     li {
                         list-style-type: none;
                         @include fnt.button;
-                        color: var(--color-white);
+                        color: var(--color-darkBlue);
                         font-weight: var(--openSans-weight-regular);
 
                         @media only screen and (max-width: 768px) {

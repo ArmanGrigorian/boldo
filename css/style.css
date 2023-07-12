@@ -8,13 +8,13 @@
   --openSans-weight-regular: 400;
   --openSans-weight-semiBold: 600;
   --openSans-weight-bold: 700;
-  --font-size-h1: clamp(32px, 4vw, 43px);
-  --font-size-h2: clamp(37px, 4vw, 48px);
+  --font-size-h1: clamp(30px, 4vw, 40px);
+  --font-size-h2: clamp(32px, 4vw, 42px);
   --font-size-h3: clamp(25px, 2vw, 36px);
   --font-size-strong: clamp(17px, 2vw, 24px);
   --font-size-thin: clamp(10px, 2vw, 14px);
   --font-size-p: clamp(12px, 2vw, 16px);
-  --font-size-buttons: clamp(15px, 1.4vw, 20px);
+  --font-size-buttons: clamp(15px, 1.3vw, 18px);
   --font-size-h1-mobile: 23px;
   --font-size-h2-mobile: 25px;
   --font-size-h3-mobile: 21px;
@@ -77,7 +77,7 @@ html {
 main {
   background-color: var(--color-main-white);
   margin: 0 auto;
-  max-width: 1320px;
+  max-width: 1120px;
 }
 main header {
   padding: calc(var(--padding-mid) * 2) calc(var(--padding-mid) * 10);
@@ -259,7 +259,7 @@ main header .headerMid .headerMidLft h2 {
   font-size: var(--font-size-h2);
   color: var(--color-white);
   font-weight: 600;
-  text-shadow: 0px 0px 1px var(--color-darkBlue);
+  text-shadow: 0px 1px 1px var(--color-darkBlue);
 }
 @media only screen and (max-width: 768px) {
   main header .headerMid .headerMidLft h2 {
@@ -273,7 +273,8 @@ main header .headerMid .headerMidLft p {
   font-size: var(--font-size-p);
   color: var(--color-white);
   font-weight: var(--openSans-weight-regular);
-  text-shadow: 0px 0px 1px var(--color-darkBlue);
+  text-shadow: 0px 1px 1px var(--color-darkBlue);
+  letter-spacing: 1px;
 }
 @media only screen and (max-width: 768px) {
   main header .headerMid .headerMidLft p {
@@ -295,8 +296,8 @@ main header .headerMid .headerMidLft div button {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
   font-weight: var(--openSans-weight-bold);
-  padding: 14px 36px;
-  border-radius: 26px;
+  padding: 12px 32px;
+  border-radius: 22px;
   cursor: pointer;
 }
 @media only screen and (max-width: 1152px) {
@@ -943,7 +944,7 @@ main .secOne .artTwo .artTwoRight ul li {
   list-style-type: none;
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
-  color: var(--color-white);
+  color: var(--color-darkBlue);
   font-weight: var(--openSans-weight-regular);
 }
 @media only screen and (max-width: 768px) {
@@ -961,8 +962,8 @@ main .secOne .artTwo .artTwoRight button {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
   font-weight: var(--openSans-weight-bold);
-  padding: 14px 36px;
-  border-radius: 26px;
+  padding: 12px 32px;
+  border-radius: 22px;
   cursor: pointer;
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
@@ -1499,8 +1500,8 @@ main .secTwo .artSix .learnMoreDiv button {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
   font-weight: var(--openSans-weight-bold);
-  padding: 14px 36px;
-  border-radius: 26px;
+  padding: 12px 32px;
+  border-radius: 22px;
   cursor: pointer;
   color: var(--color-darkBlue);
   background-color: var(--color-white);
@@ -1592,8 +1593,8 @@ main .secTwo .artSeven form input[type=email] {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
   font-weight: var(--openSans-weight-bold);
-  padding: 14px 36px;
-  border-radius: 26px;
+  padding: 12px 32px;
+  border-radius: 22px;
   cursor: pointer;
   transition: var(--transition-both);
 }
@@ -1611,8 +1612,8 @@ main .secTwo .artSeven form input[type=submit] {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-buttons);
   font-weight: var(--openSans-weight-bold);
-  padding: 14px 36px;
-  border-radius: 26px;
+  padding: 12px 32px;
+  border-radius: 22px;
   cursor: pointer;
   color: var(--color-darkBlue);
   background-color: var(--color-green);
